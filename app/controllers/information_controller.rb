@@ -12,7 +12,7 @@ end
 
 def create
     @info = Information.new(info_params)
-    binding.pry
+    # binding.pry
     # render :new if params[:back]
     if params[:back]
         render :new
