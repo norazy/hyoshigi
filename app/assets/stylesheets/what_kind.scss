@@ -1,0 +1,329 @@
+.what_kind_haikei {
+    background-color: #942a2a;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 900px;
+        height: 80px;
+        margin: 10px auto 20px;
+        
+        ul {
+            padding: 10px 10px 10px 0;
+            list-style: none;
+            
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+        
+            li {
+                width: 150px;
+                height: 40px;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                margin: 10px 20px 10px 0;
+                box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                padding: 10px 20px;
+                display: flex;
+                
+                position: relative;
+                
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                 }
+            
+                .ten{
+                        border-radius: 16px;
+                        height: 20px;
+                        width: 20px;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                   
+                    span {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                }
+
+                
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                
+                .midori {
+                    background-color: #93c47dff;
+                }
+                
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+                
+                
+            }
+            li:hover{
+                    background-color: #c97e83;
+                
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .what_kind_haikei2 {
+        // height: 500px;
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 60px;
+        text-align: center;
+        margin-top: 34px;
+
+        .classtype {
+            color: #000000;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding: 50px 0 20px 0;
+        }
+        
+        .hyou1 {
+            padding: 30px 130px;
+
+            th, td {
+                text-align: center;
+                border: 2px solid #942a2a;
+                padding: 5px 0;
+            }
+
+            th {
+                font-size: 22px;
+            }    
+            
+            td {
+                font-size: 19px;
+            }
+                
+            .hyou2 {
+                width: 45%;
+                float: left;
+            }
+            
+            .hyou3 {
+                width: 45%;
+                float: right;
+            }
+        }
+        
+        .setsumei {
+            color: #000000;
+            padding: 20px;
+            
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .what_kind_haikei3 {
+        // height: 500px;
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 60px;
+        text-align: center;
+        margin-top: 34px;
+        
+        .dekirukoto {
+            color: #000000;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding: 50px 0 20px 0;            
+        }
+        
+        .dekirukoto2 {
+            // padding: 0px 100px;
+            width: 80%;
+            margin: 30px auto;
+
+            th, td {
+                text-align: center;
+                border: 2px solid #942a2a;
+                padding: 5px 0;
+            }
+
+            th {
+                font-size: 19px;
+            }    
+            
+            td {
+                font-size: 18px;
+            }
+        }
+        
+        .setsumei2 {
+            color: #000000;
+            text-align: center;
+            padding-top: 8px;
+            
+            span {
+                font-size: 20px;
+            }
+        }
+        
+    }
+    
+    .what_kind_haikei4 {
+        // height: 500px;
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 60px;
+        text-align: center;
+        margin-top: 34px;
+        
+        th, td {
+            text-align: center;
+            border: 2px solid #942a2a;
+            padding: 5px 0;
+        }
+
+        th {
+            font-size: 22px;
+        }    
+        
+        td {
+            font-size: 19px;
+        }
+            
+        .schedule {
+            color: #000000;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding: 50px 0 20px 0;
+        }
+        
+        .schedule2 {
+            width: 80%;
+            margin: 15px auto;
+        }
+        
+        .schedule3 {
+            width: 80%;
+            margin: 40px auto;
+        }
+        
+        .setsumei3 {
+            color: #000000;
+            text-align: center;
+            
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+        // .classtype2 {
+        //     color: #942a2a;
+        //     font-size: 27px;
+        //     -webkit-margin-before: 0.5em;
+        //     -webkit-margin-after: 0.8em;
+            
+        //     span {
+        //         color: #000000;
+        //     }
+        // }
+        
+                // {
+        //     padding: 30px 150px;
+
+        //     th, td {
+        //         text-align: center;
+        //         border: 2px solid #942a2a;
+        //         padding: 5px 0;
+        //     }
+
+        //     th {
+        //         font-size: 22px;
+        //     }    
+            
+        //     td {
+        //         font-size: 19px;
+        //     }
+            
+        //     .setsumei2 {
+        //     color: #000000;
+        //     padding: 20px;
+            
+        //         span {
+        //             font-size: 20px;
+        //         }
+        //     }        
+        // }
+        
+        // .dekirukoto4 {
+        //     padding: 0px 150px;
+            
+        //     .dekirukoto5 {
+        //         color: black;
+        //         font-size: 22px;
+        //         text-align: left;
+        //         padding: 0 5px 15px 0;
+        //     }
+
+        //     th, td {
+        //         text-align: center;
+        //         border: 2px solid #942a2a;
+        //         padding: 5px 0;
+        //     }
+
+        //     th {
+        //         font-size: 22px;
+        //     }    
+            
+        //     td {
+        //         font-size: 19px;
+        //     }
+            
+        //     .dekirukoto7 {
+        //         padding: 50px 0 30px 0; 
+        //     }
+            
+        //     .setsumei2 {
+        //         color: #000000;
+        //         padding: 0 20px;
+        //         text-align: left;
+                
+        //         span {
+        //             font-size: 20px;
+        //         }
+        //     }
+        // }

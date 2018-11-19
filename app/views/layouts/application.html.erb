@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>拍子木塾</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <%= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+  
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<header>
+  <div class="title">
+    <div class="mediataiou">
+      <!--↓ロゴ部分-->
+      <div class="header1">
+        <div class = "logo">
+          <div class = "logo1">
+            <span>こども中国語教室</span>
+          </div>
+          <div class="logo2">
+            <span ><a href="/">拍子木塾</a></span>
+          </div>
+          <div class = "logo3">
+            <span>ひょうしぎじゅく</span>
+          </div>
+        </div>
+      </div>
+      <!--↓言語切り替え部分-->
+      <div class="header2 clearfix">
+        <div class="gengo">
+          <div class="gengo2">
+            <div class="gengo22">
+              <a href="#">中文</a>
+            </div>
+          </div>
+          <div class="gengo2">
+            <div class="gengo22">
+              <a href="#">En<span>glish</span></a>
+            </div>
+          </div>
+        </div>
+        <!--↓資料請求とかの部分-->
+        <div class="annai">
+          <div class="annai2">
+            <div class="annai3">
+              <a href="/information"></a>
+              <span>資料<br>請求</span>
+            </div>
+          </div>
+          <div class="annai2">
+            <div class="annai3">
+              <a href="#"></a>
+              <span>無料<br>体験</span>
+            </div>
+          </div>
+          <div class="annai2">
+            <div class="annai3 nyukai">
+              <a href="#"></a>
+              <span>入会<br>申込</span>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</header>
+
+<%= yield %>
+
+<footer>
+  <div class="mediataiou">
+    <div class="fjoudan">
+      <div class="links">
+        <ul>
+            <li><a href="#">会社案内</a></li>
+            <li><a href="#">お問合せ</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="hyoshigis/more">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="sns clearfix">
+        <div class="sns2">
+          <div class="instagram">
+            <!--パブリックに入れない方法があるか-->
+            <a href="#"><img alt="instagram" src="/instagram.png"/></a>
+          </div>
+        </div>
+        <div class="sns2">
+          <div class="twitter">
+            <a href="#"><img alt="twitter" src="/twitter.png"/></a>
+          </div>        
+        </div>
+        <div class="sns2">
+          <div class="weibo">
+            <a href="#"><img alt="weibo" src="/weibo.png"/></a>
+            <!--<a href="#"><img alt="weibo" src="/weibo.png"/></a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    (c) 2018 HYOSHIGI    
+  </div>
+</footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.js"></script>
+</body>
+</html>

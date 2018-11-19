@@ -1,0 +1,137 @@
+<div class = "where_haikei">
+    <div class="kobetsupage">
+        <ul class="kobetsupage2" >
+            <li>
+                <a href="/hyoshigis/why" class="linkurl"></a>
+                 <div class = "links3">
+                    <div class = "ten pinku"></div>
+                </div>
+                <p class="link_moji"><span>中国語</span></p>
+            </li>
+            <li>
+                <a href="/hyoshigis/what" class="linkurl"></a>
+                 <div class = "links3">
+                    <div class = "ten kiiro"></div>
+                </div>
+                <p class="link_moji"><span>拍子木塾</span></p>
+            </li>
+            <li>
+                <a href="/hyoshigis/what_kind" class="linkurl"></a>
+                <div class = "links3">
+                    <div class = "ten midori"></div>
+                </div>
+                <p class="link_moji"><span>授業</span></p>
+            </li>
+            <li>
+                <a href="/hyoshigis/how_much" class="linkurl"></a>
+                <div class = "links3">
+                    <div class = "ten ao"></div>
+                </div>
+                <p class="link_moji"><span>料金</span></p>                    
+            </li>
+            <li>
+                <a href="/hyoshigis/more" class="linkurl"></a>
+                <div class = "links3">
+                    <div class = "ten murasaki"></div>
+                </div>
+                <p class="link_moji"><span>Q & A</span></p>
+            </li>
+        </ul>
+    </div>
+    
+    <div class ="address">
+        <div class="address2">
+            <span>住所</span>
+        </div>
+        <div class="address3">
+            <div class="addressmoji">
+                <span>〒315-0015</span><br>
+                <input id="copyTarget" type="text" value="茨城県石岡市貝地2-2-25"  readonly>
+            </div>
+            
+            <!--住所コピーのボタン↓-->
+            <div class="addresscopy">
+                <button class="button2" onclick="copyToClipboard()">
+                    <i class="material-icons">content_copy</i><br>
+                    <span>住所をコピー</span>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="address4">
+            <span>★石岡駅から徒歩7分<br>★丸亀製麺さん、異風園の近く<br>★敷地内に駐車場あり</span>
+        </div>
+    </div>
+    
+    <div class="google_map">
+        <div class="google_map2">
+            <span>地図</span>
+        </div>
+        <div class="google_map3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3220.1805674035563!2d140.27855971527268!3d36.18649018007955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602216a72e6ba6cd%3A0xe5fc6276fe7b5194!2z44CSMzE1LTAwMTUg6Iyo5Z-O55yM55-z5bKh5biC6LKd5Zyw77yS5LiB55uu77yS4oiS77yS77yV!5e0!3m2!1sja!2sjp!4v1540207520939" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="classroom">
+        <div class="classroom2">
+            <span>外観・教室の様子</span>
+        </div>
+        <div class="classroomphotos">
+            <div id="smallPicts"></div>
+        </div>
+        <div class="classroomphotos2">
+            <div id="pictureFrame">
+                <img src="/picture000.jpg" style="width: 700px; height: 450px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <script>
+ 
+function copyToClipboard() {
+        // コピー対象をJavaScript上で変数として定義する
+        var copyTarget = document.getElementById("copyTarget");
+        // コピー対象のテキストを選択する
+        copyTarget.select();
+        // 選択しているテキストをクリップボードにコピーする
+        document.execCommand("Copy");
+        // コピーをお知らせする
+        alert("コピーできました！ : " + copyTarget.value);
+}
+ 
+ $(document).on("turbolinks:load", function() {
+    let pictureLength = 5;
+    let html = "";
+    
+    for (let i=0; i<5; i++) {
+        // iの最初の値は０
+        // 2番目の数：いつまで繰り返しを続けるか。今回は画像の枚数まで続ける。
+        // i++　はi+1をし続ける意味
+        
+        let fileName = `/picture00${i}.jpg`;
+        
+        html += `<img src="${fileName}" style="width: 130px; height: 90px;">`;
+    }
+    
+    document.getElementById("smallPicts").innerHTML = html;
+    // 上で定義した：`<img src="${ファイル名}" style="width: 120px;">`;をsmallPictsに代入する
+
+    for (let i=0; i<5; i++) {
+        let fileName = `/picture00${i}.jpg`;
+        
+        document.images[i].onmouseover = function() {
+          showPicture(fileName);
+        }
+
+    }
+
+  function showPicture(fileName) {
+    document.getElementById("pictureFrame").innerHTML =
+      `<img src="${fileName}" style="width: 700px; height: 450px;">`;
+  }     
+
+ })
+</script>

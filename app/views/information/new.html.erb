@@ -1,0 +1,168 @@
+<div class="infor_haikei">
+    <div class='infor_haikei2'>
+        <div class="infonotes">
+            <span>＊ダウンロードまたは郵送からお選びいただけます。</span>
+        </div>
+        
+        <div class="infodownload">
+            <span class='infoletter'>資料請求（ダウンロード）</span>
+            <h2></h2>
+            <div class="infodownloadform">
+                <%= form_for(@info, url: '/information/confirm') do |f| %>
+                    <div class='name'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='name2'>
+                            <%= f.label :お名前 %>
+                        </div>
+                        <div class='name3'>
+                            <%= f.text_field :lastname, placeholder: '姓' %>
+                            <%= f.text_field :firstname, placeholder: '名' %>
+                        </div>
+                    </div>
+                    <div class='email'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='email2'>
+                            <%= f.label :Eメール %>
+                        </div>
+                        <div class='email3'>
+                            <%= f.email_field :email, placeholder: 'メールアドレス' %>
+                        </div>
+                    </div>
+                    
+                    <div class='submit'>
+                        <div class="privacy">
+                            <a href="#">個人情報の取り扱いについて</a>
+                        </div>
+                        <%= f.submit 'ダウンロード', class: 'submit2' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        
+        <div class="infomailing">
+            <span class='infoletter'>資料請求（郵送）</span>
+            <h2></h2>
+            <div class="infomailform">
+                <%= form_for(@info, url: 'information/confirm') do |f| %>
+                    <!--フォームにエラーがある時に表示される↓-->
+                    <% if @info.errors.any? %>
+                        <h3>入力した内容にエラーが<%= @info.errors.count %>件あります</h3>
+                        <ul>
+                            <% @info.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                            <% end %>
+                        </ul>
+                    <% end %>
+
+                    <div class='name'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='name2'>
+                            <%= f.label :お名前 %>
+                        </div>
+                        <div class='name3'>
+                            <%= f.text_field :lastname, placeholder: '姓' %>
+                            <%= f.text_field :firstname, placeholder: '名' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='namekana'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='namekana2'>
+                            <%= f.label :フリガナ %>
+                        </div>
+                        <div class='namekana3'>
+                            <%= f.text_field :lastnamekana, placeholder: 'セイ' %>
+                            <%= f.text_field :firstnamekana, placeholder: 'メイ' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>    
+                    <div class='email'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='email2'>
+                            <%= f.label :Eメール %>
+                        </div>
+                        <div class='email3'>
+                            <%= f.text_field :email, placeholder: 'メールアドレス' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='emailc'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='emailc2'>
+                                <%= f.label :Eメール %>
+                                <%= f.label :【確認用】%>
+                            </div>
+                            <div class='emailc3'>
+                                <!--<input placeholder="メールアドレス確認用" type="email" name="information[email_cf]" id="information_email_cf">-->
+                                <!--カラム名はないけど、手書きでhtmlを書いている-->
+                                <!--<input placeholder="メールアドレス確認用" type="email" name="email_confirmation" id="information_email_cf">-->
+                                <%= f.text_field :email_confirmation, placeholder: 'メールアドレス【確認用】' %>
+                            </div>                    
+                        </div>
+                    <div class='line'></div>
+    
+                    <div class='address'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='address2'>
+                            <%= f.label :住所 %>
+                        </div>
+                        <div class='address3'>
+                            <%= f.text_field :address, placeholder: '住所' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='phonenumber'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='phonenumber2'>
+                            <%= f.label :phonenumber1, "電話番号(半角数字でご記入ください)" %>
+                        </div>                            
+                    </div>
+                    <div class='phonenumber7'>
+                        <div class='emptybox'></div>
+                        <div class='phonenumber3'>
+                            <%= f.text_field :phonenumber1 %>
+                            <!-- f.text_field :phonenumber1, placeholder: '数字のみでご記入ください' -->
+                        </div>
+                        <div class="line2">ー</div>
+                        <div class='phonenumber3'>
+                            <%= f.text_field :phonenumber2 %>
+                        </div>
+                        <div class="line2">
+                            ー
+                        </div>
+                        <div class='phonenumber3'>
+                            <%= f.text_field :phonenumber3 %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='submit'>
+                        <div class="privacy">
+                            <a href="#">個人情報の取り扱いについて</a>
+                        </div>
+                        <%= f.submit '確認画面へ進む', class: 'submit2' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

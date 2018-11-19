@@ -1,0 +1,327 @@
+.what_haikei {
+    background-color: #c97e83;
+    // height: 500px;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 900px;
+        height: 80px;
+        margin: 10px auto 20px;
+        
+        ul {
+            padding: 10px 10px 10px 0;
+            list-style: none;
+            
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+        
+            li {
+                width: 150px;
+                height: 40px;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                margin: 10px 20px 10px 0;
+                box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                padding: 10px 20px;
+                display: flex;
+                
+                position: relative;
+                
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    // margin-left: 0
+                }
+            
+                .ten{
+                        border-radius: 16px;
+                        height: 20px;
+                        width: 20px;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                   
+                    span {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                }
+
+                
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                
+                .midori {
+                    background-color: #93c47dff;
+                }
+                
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+                
+                
+            }
+            li:hover{
+                    background-color: #942a2a;
+                
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .what_haikei2 {
+        // height: 500px;
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 30px;
+        
+        .whatIsHyoshigi {
+            color: black;
+            font-size: 25px;
+            padding: 8% 12%;
+            line-height: 46px;
+        }
+        
+        .whatIsHyoshigi2 {
+            font-size: 23px;
+            padding-left: 26%;
+            padding-top: 34px;
+            line-height: 62px;
+        }
+    }
+
+    .what_haikei3 {
+        // height: 500px;
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 80px;
+        
+        .teacher {
+            color: #942a2a;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding-top: 40px;
+        }
+        
+        .teacher2 {
+            color: black;
+            font-size: 23px;
+            width: 70%;
+            margin: 30px auto 0;
+            text-align: justify;
+            
+            .aka {
+                color: #942a2a;
+                display: block;
+                padding-top: 25px;
+            }
+        }
+        
+        .teacherTable {
+            background-color: #942a2a;
+            height: 40px;
+            width: 54%;
+            margin: 50px auto 40px;
+            text-align: center;
+            padding: 4px;
+            
+            span {
+                color: #ffffff;
+                font-size: 22px;
+            }
+        }
+        
+        .teacherTable2 {
+            th, td {
+                text-align: center;
+                border: 2px solid #942a2a;
+                padding: 5px 0;
+            }
+    
+            th {
+                font-size: 22px;
+                color: #942a2a;
+            }    
+            
+            td {
+                font-size: 18px;
+            }
+            
+            .teacherTable3 {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .what_haikei4 {
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        
+        .lessonflow{
+            color: #942a2a;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding-top: 40px;
+        }
+        
+        .lessonimage2 {
+            width: 80%;
+            margin: 25px auto;
+            padding-bottom: 8%;
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+    //     .warmingup {
+    //         width: 80%;
+    //         border: 1px solid black;
+    //         height: 350px;
+    //         margin: 0 auto;
+    //         padding: 30px 30px 40px 30px;
+
+            
+    //         .warmingupbg{
+    //             border: 1px solid #ffe599;
+    //             width: 60%;
+    //             // float: left;
+    //             height: 100%;
+    //             border-radius: 50%;
+    //             background-color: #ffe599;
+    //             padding-top: 35px;
+    //             color: #49352a;
+    //             position: relative;
+
+    //             .warminguptitle {
+    //                 text-align: center;
+    //                 font-size: 34px;
+    //                 position: absolute;
+    //                 left: 10%;
+    //             }
+                
+    //             .warmingupcontents {
+    //                 width: 100%;
+    //                 // float: right;
+    //                 font-size: 25px;
+    //                 margin: 20px;
+    //                 position: absolute;
+    //                 left: 26%;
+    //                 bottom: 10%;
+    //                 letter-spacing: 8px;
+    //             }
+
+    //         }
+            
+
+            
+    //     // }
+    // }
+
+    .what_haikei5{
+        // height: 500px;
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 80px;
+        
+        .speaking {
+            color: #942a2a;
+            font-size: 32px;
+            text-align: center;
+            width: 100%;
+            padding-top: 40px;
+        }
+        
+        .speaking2 {
+            color: #49352a;
+            font-size: 23px;
+            width: 70%;
+            margin: 33px auto;
+            text-align: justify;
+            
+            .speakingaka {
+                color: #942a2a;
+                // display: block;
+                padding-top: 25px;
+            }
+        }
+        
+        .speaking3 {
+            width: 70%;
+            margin: 40px auto;
+ 
+
+            .speaking31 {
+                width: 60%;
+                float: right;
+                border: 1px dotted black;
+                // padding: 30px;
+
+                    
+                .speaking3picture {
+                    // border: 1px solid black;
+                    // height: 150px;
+                    
+                    img {
+                        margin: 15px auto;
+                        display: block;
+                        height: 170px;
+                    }
+                }
+                
+                // .speaking3text {
+                //     width: 80%;
+                //     margin: 0 auto;
+                //     font-size: 18px;
+                //     padding-bottom: 20px;
+                // }
+            }
+            
+        }
+        
+        .speaking4 {
+            color: #942a2a;
+            font-size: 23px;
+            width: 70%;
+            margin: 30px auto;
+        }
+
+    }
+}
+
+

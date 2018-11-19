@@ -1,0 +1,1686 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media (max-width: 499px) {
+    .joudan {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gedan {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .joudan{
+        box-sizing: border-box;
+        text-align: left;
+        padding-top: 150px;
+
+    }
+
+    .picture{
+        height: 200px;
+        margin-top: 14px;
+        background: image-url("panda.gif") no-repeat center center;
+        background-size: 300px auto;
+    }
+
+    .why span {
+        color: #49352a;
+    }
+    
+    .why2{
+        display: none;
+    }
+    
+    .why34 {
+        border: solid 4px #49352a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;
+        
+        .why3{
+        padding: 10px 0;
+        
+            span {
+            font-size: 20px;
+            display: block;
+            margin-left: 20px;
+            }        
+        }
+        
+        .why4 {
+            float: right;
+            width: 218px;
+        
+            span{
+            font-size: 14px;
+            text-align: left;
+            display: block;
+            padding: 0 10px 10px 10px;
+            }
+        }
+
+        .mottokuwashiku {
+            width: 218px;
+            float: right;
+            
+            .btn {
+                background-color: #c97e83;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #af6469;
+            }
+        }
+        
+    }
+
+    
+    .what {
+        width: 100%;
+        background-color: #c97e83;
+        padding: 2px;
+
+        span {
+            color: #ffffff;
+        }
+
+        .what2{
+            display: none;
+        }
+
+        .what34{
+            border: solid 4px #ffffff;
+            border-radius: 16px;
+            margin: 3% auto;
+            width: 87%;
+            
+            .what3{
+                padding: 10px 0;
+            
+                span {
+                    font-size: 20px;
+                    display: block;
+                    margin-left: 20px;
+                }
+            }
+        
+            .what4 {
+                float: right;
+                width: 218px;
+            
+                span{
+                    font-size: 14px;
+                    text-align: left;
+                    display: block;
+                    padding: 0 10px 10px 10px;
+                }
+            }
+            
+            .mottokuwashiku {
+                width: 218px;
+                float: right;
+            
+                .btn {
+                    background-color: #942a2a;
+                    margin: 0 35px 20px 20px;
+                    
+                    position: relative;
+                }
+                
+                .btn a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin-left: 0;
+                }
+                
+                .btn:hover {
+                    background-color: #7a1010;
+                }
+            }
+        }
+    }
+ 
+    // ---------------------
+    .gedan a{
+        text-align: left;
+        font-size: 20px;
+        display: block;
+        margin-left: 20px;
+    }
+
+    .what_kind span {
+        color: #000000;
+    }
+    
+    .what_kind2 {
+        display: none;
+    }
+
+    .what_kind34{
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;
+
+        .what_kind3 {
+            padding: 20px 0 10px 10px;
+        
+            span {
+                font-size: 20px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+        
+        .what_kind4 {
+            float: right;
+            width: 218px;
+        
+            span{
+                font-size: 14px;
+                text-align: left;
+                display: block;
+                padding: 0 10px 10px 10px;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 218px;
+            float: right;
+        
+            .btn {
+                background-color: #49352a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #634f44;
+            }
+        }
+    }
+
+    
+    .how_much {
+        width: 100%;
+        background-color: #49352a;
+        padding: 2px;
+    
+        span {
+            color: #ffffff;
+        }
+    }
+
+    .how_much2 {
+        display: none;
+    }
+
+    .how_much34 {
+        border: solid 4px #ffffff;
+        border-radius: 16px;
+        width: 87%;
+        margin: 3% auto;
+
+        .how_much3 {
+            padding: 10px 0;
+            
+            span {
+                font-size: 20px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    
+        .how_much4 {
+            float: right;
+            width: 218px;
+        
+            span{
+                font-size: 14px;
+                text-align: left;
+                display: block;
+                padding: 0 10px 10px 10px;
+            }
+        }
+
+        .mottokuwashiku {
+            width: 218px;
+            float: right;
+            
+            .btn {
+                background-color: #942a2a;
+                margin: 0 35px 20px 20px;
+                // float: right;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #7a1010;
+            }
+        }
+    }
+
+
+    .where2 {
+        display: none;
+    }
+ 
+    .where34 {
+        border: solid 4px #49352a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;            
+
+        .where3 {
+            padding: 2px 0 10px 10px;
+        
+            span {
+                font-size: 20px;
+                color: #000000;
+                display: block;
+                margin-left: 20px;
+                padding: 20px 0 20px 0;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 218px;
+            float: right;
+            
+            .btn {
+                background-color: #c97e83;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #af6469;
+            }
+        }
+    }       
+
+    .more{
+        width: 100%;
+        background-color: #942a2a;
+        padding: 2px;        
+
+        span {
+            color: #ffffff;
+        }
+    }
+
+    .more2 {
+        display: none;
+    }
+    
+    .more34 {
+        border: solid 4px #ffffff;
+        border-radius: 16px;
+        width: 87%;
+        margin: 3% auto;
+
+        .more3 {
+            padding: 10px 0;
+        
+            span {
+            font-size: 20px;
+            display: block;
+            margin-left: 20px;
+            }
+        }
+    
+            
+        .more4 {
+            float: right;
+            width: 218px;
+            
+            span{
+                font-size: 14px;
+                text-align: left;
+                display: block;
+                padding: 0 10px 10px 10px;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 218px;
+            float: right;
+        
+            .btn {
+                background-color: #49352a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #634f44;
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+    .joudan {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gedan {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .joudan{
+        box-sizing: border-box;
+        text-align: left;
+        padding-top: 120px;
+    }
+    
+    .picture{
+        height: 200px;
+        margin-top: 35px;
+        background: image-url("panda.gif") no-repeat center center;
+        background-size: 490px auto;
+    }
+
+    .why span {
+        color: #49352a;
+    }
+    
+    .why2{
+        display: none;
+    }
+    
+    .why34 {
+        border: solid 4px #49352a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;        
+
+        .why3{
+            padding: 20px 0 10px 10px;
+
+            span {
+                font-size: 23px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+
+        .why4 {
+            float: right;
+            width: 250px;
+            padding: 15px 10px;
+            margin: 0 0 0 200px;
+        
+            span{
+                font-size: 16px;
+                text-align: left;
+                display: block;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+
+            .btn {
+                background-color: #c97e83;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #af6469;
+            }
+        }
+    }
+
+    .what {
+        width: 100%;
+        background-color: #c97e83;
+        padding: 2px;
+
+        span {
+            color: #ffffff;
+        }
+    }
+
+    .what2{
+        display: none;
+    }
+
+    .what34{
+        border: solid 4px #ffffff;
+        border-radius: 16px;
+        margin: 3% auto;
+        width: 87%;
+
+        .what3{
+            padding: 20px 0 0 10px;
+
+            span {
+                font-size: 23px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    
+        .what4 {
+            float: right;
+            width: 250px;
+            padding: 15px 10px;
+            margin: 0 0 0 200px;
+            
+            span{
+                font-size: 16px;
+                text-align: left;
+                display: block;
+            }
+        }
+
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+        
+            .btn {
+                background-color: #942a2a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #7a1010;
+            }
+        }
+    }
+
+
+    
+    // ---------------------
+    .gedan a{
+        text-align: left;
+        font-size: 23px;
+        display: block;
+        margin-left: 20px;
+    }
+    
+    .what_kind span {
+        color: #000000;
+    }
+    
+    .what_kind2 {
+        display: none;
+    }
+
+    .what_kind34{
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;               
+
+        .what_kind3 {
+            padding: 20px 0 10px 10px;
+        
+            span {
+                font-size: 23px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+ 
+        .what_kind4 {
+            float: right;
+            width: 250px;
+            padding: 15px 10px;
+            margin: 0 0 0 200px;
+
+            span {
+                font-size: 16px;
+                text-align: left;
+                display: block;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+        
+            .btn {
+                background-color: #49352a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #634f44;
+            }
+        }
+        
+        
+
+    }
+
+    
+    .how_much {
+        width: 100%;
+        background-color: #49352a;
+        padding: 2px;        
+
+        span {
+            color: #ffffff;
+        }
+    }
+
+    .how_much2 {
+        display: none;
+    }
+
+    .how_much34 {
+        border: solid 4px #ffffff;
+        border-radius: 16px;
+        width: 87%;
+        margin: 3% auto;
+    
+        .how_much3 {
+            padding: 20px 0 0 10px;
+
+            span {
+                font-size: 23px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    
+        .how_much4 {
+            float: right;
+            width: 250px;
+            padding: 15px 10px;
+            margin: 0 0 0 200px;
+
+            span {
+                font-size: 16px;
+                text-align: left;
+                display: block;        
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+        
+            .btn {
+                background-color: #942a2a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #7a1010;
+            }
+        }
+    }
+
+
+    .where span {
+        color: #000000;
+        padding: 20px 0 80px 0;
+    }
+
+    .where2 {
+        display: none;
+    }
+ 
+    .where34 {
+        border: solid 4px #49352a;
+        border-radius: 16px;
+        box-shadow: 2px 2px #cccccc;
+        width: 87%;
+        margin: 3% auto;
+        
+        .where3 {
+            padding: 20px 0 10px 10px;
+
+            span {
+                font-size: 23px;
+                color: #000000;
+                display: block;
+                margin-left: 20px;
+                padding: 0 0 40px 0;
+            }
+        }
+        
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+            
+            .btn {
+                background-color: #c97e83;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #af6469;
+            }
+        }        
+    }
+
+    .more{
+        width: 100%;
+        background-color: #942a2a;
+        padding: 2px;        
+    
+        span {
+            color: #ffffff;
+        }
+    }
+    
+    .more2 {
+        display: none;
+    }
+    
+    .more34 {
+        border: solid 4px #ffffff;
+        border-radius: 16px;
+        width: 87%;
+        margin: 3% auto;
+        
+        .more3 {
+            padding: 20px 0 0 10px;
+        
+            span {
+                font-size: 23px;
+                display: block;
+                margin-left: 20px;
+            }
+        }
+    
+        .more4 {
+            float: right;
+            width: 250px;
+            padding: 15px 10px;        
+            margin: 0 0 0 200px;
+
+            span {
+                font-size: 16px;
+                text-align: left;
+                display: block;
+            }
+        }
+
+        .mottokuwashiku {
+            width: 250px;
+            float: right;
+        
+            .btn {
+                background-color: #49352a;
+                margin: 0 35px 20px 20px;
+                
+                position: relative;
+            }
+            
+            .btn a {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-left: 0;
+            }
+            
+            .btn:hover {
+                background-color: #634f44;
+            }
+        }
+    }        
+}
+
+@media (min-width: 768px) and (max-width: 1019px){
+    .joudan {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gedan {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .joudan{
+        height: 250px;
+        box-sizing: border-box;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    
+    .joudan span{
+        font-size: 25px;
+        color: #49352a;
+    }    
+    
+    .whypicture{
+        float: left;
+        width: 75%;
+        height: 300px;
+    }
+    
+    .picture{
+        width: 67%;
+        float: right;
+        height: 200px;
+        margin-top: 45px;
+        background: image-url("panda.gif") no-repeat center center;
+        background-size: 330px auto;
+    }
+    
+    .why {
+        width: 33%;
+        float: right;
+    }
+    
+    .why2{
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        box-shadow: 2px 2px #cccccc;
+        margin: 40% 8%;
+        padding: 36px 0;
+
+        position: relative;
+    }
+    
+    .why2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .why2:hover {
+        background-color: #c97e83;
+    }
+    
+    .why34 {
+        display: none;
+    }
+    
+    .why3 {
+        display: none;
+    }
+    
+    .why4 {
+        display: none;
+    }
+    
+    .what {
+        float: left;
+        width: 25%;
+    }
+    
+    .what2{
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        padding: 36px 0;
+        box-shadow: 2px 2px #cccccc;
+        margin: 40% 12%;
+
+        position: relative;
+    }
+    
+    .what2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .what2:hover {
+        background-color:  #942a2a;
+
+       span {
+            color: white;
+        }
+    }
+
+    .what34 {
+        display: none;
+    }
+    
+    .what3 {
+        display: none;
+    }
+    
+    .what4 {
+        display: none;
+    }
+        
+    
+    // ---------------------
+    .gedan{
+        text-align: center;
+    }
+    
+    .gedan span{
+        font-size: 25px;
+    }
+    
+    .what_kind span{
+        color: #ffffff;
+    }
+    
+    .what_kind {
+        width: 25%;
+        float: left;
+    }
+    
+    .what_kind2 {
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        padding: 36px 0;
+        background-color: #c97e83;
+        box-shadow: 2px 2px #cccccc;
+        margin: 0 10% 30% 10%;
+    
+        position: relative;
+    }
+    
+    .what_kind2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .what_kind2:hover {
+        background-color: #af6469;
+        border: solid 4px #af6469;
+    }
+    
+    .what_kind34 {
+        display: none;
+    }
+    
+    .what_kind3 {
+        display: none;
+    }
+    
+    .what_kind4 {
+        display: none;
+    }
+
+    .how_much span {
+        color: #49352a;
+    }
+    
+    .how_much {
+        width: 25%;
+        float: left;
+    }
+    
+    .how_much2 {
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        padding: 36px 0;
+        box-shadow: 2px 2px #cccccc;
+        margin: 0 10% 30% 10%;
+
+        position: relative;
+    }
+    
+    .how_much2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .how_much2:hover {
+        background-color: #c97e83;
+    }
+    
+    .how_much34 {
+        display: none;
+    }
+    
+    .how_much3 {
+        display: none;
+    }
+    
+    .how_much4 {
+        display: none;
+    }
+    
+    .where span {
+        color: #ffffff;
+    }
+    
+    .where {
+        width: 25%;
+        float: left;
+    }
+    
+    .where2 {
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        padding: 36px 0;
+        background-color: #942a2a;
+        box-shadow: 2px 2px #cccccc;
+        margin: 0 10% 30% 10%;
+
+        position: relative;
+    }
+    
+    .where2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .where2:hover {
+        background-color: #7a1010;
+        border: solid 4px #7a1010;
+    }
+    
+    .where34 {
+        display: none;
+    }
+    
+    .where3 {
+        display: none;
+    }
+    
+    .more span {
+        color: #49352a;
+    }
+    
+    .more {
+        width: 25%;
+        float: left;
+    }
+    
+    .more2 {
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 145px;
+        height: 145px;
+        padding: 36px 0;
+        box-shadow: 2px 2px #cccccc;
+        margin: 0 12% 30% 12%;
+        
+        position: relative;
+    }
+    
+    .more2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .more2:hover {
+        background-color:  #942a2a;
+        
+        span {
+            color: white;
+        }
+    }
+    
+    .more34 {
+        display: none;
+    }
+    
+    .more3 {
+        display: none;
+    }
+    
+    .more4 {
+        display: none;
+    }
+}
+
+@media (min-width: 1020px) {
+    .joudan {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .gedan {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .joudan{
+        height: 300px;
+        box-sizing: border-box;
+        text-align: center;
+        padding-top: 140px;
+    }
+    
+    .joudan span{
+        font-size: 30px;
+        color: #49352a;
+    }
+    
+    .whypicture{
+        float: left;
+        width: 75%;
+        height: 300px;
+    }
+    
+    .picture{
+        width: 67%;
+        float: right;
+        height: 200px;
+        padding: 10px;
+        margin: 50px 0 0 0;
+        background: image-url("panda.gif") no-repeat center center;
+    }
+    
+    .why {
+        width: 33%;
+        float: right;
+        padding: 52px 35px 50px 35px;
+    }
+    
+    .why2{
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        box-shadow: 2px 2px #cccccc;
+
+        position: relative;
+    }
+    
+    .why2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+    }
+    
+    .why2:hover {
+        background-color: #c97e83;
+    }
+    
+    .why34 {
+        display: none;
+    }
+
+    .why3 {
+        display: none;
+    }
+    
+    .why4 {
+        display: none;
+    }
+    
+    .what {
+        height: 300px;
+        float: left;
+        width: 25%;
+        padding: 52px 37px 58px 37px;
+    }
+    
+    .what2{
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        box-shadow: 2px 2px #cccccc;
+
+        position: relative;
+    }
+
+    .what2:hover {
+        background-color:  #942a2a;
+
+       span {
+            color: white;
+        }
+    }
+
+    // .what2 span:hover{
+    //     color: #ffffff;
+    // }
+
+    .what2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .what34 {
+        display: none;
+    }
+    
+    .what3 {
+        display: none;
+    }
+    
+    .what4 {
+        display: none;
+    }
+    
+    // ---------------------
+    .gedan{
+        text-align: center;
+    }
+    
+    .gedan span{
+        font-size: 30px;
+    }
+    
+    .what_kind span {
+        color: #ffffff;
+    }
+    
+    .what_kind {
+        width: 25%;
+        float: left;
+        padding: 50px 35px;
+    }
+    
+    .what_kind2 {
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        background-color: #c97e83;
+        box-shadow: 2px 2px #cccccc;
+
+        position: relative;
+    }
+    
+    .what_kind2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+    
+    .what_kind2:hover {
+        background-color: #af6469;
+        border: solid 4px #af6469;
+    }
+    
+    .what_kind34 {
+        display: none;
+    }
+    
+    .what_kind3 {
+        display: none;
+    }
+    
+    .what_kind4 {
+        display: none;
+    }
+
+    .how_much span {
+        color: #49352a;
+    }
+    
+    .how_much {
+        width: 25%;
+        float: left;
+        padding: 50px 35px;
+    }
+    
+    .how_much2 {
+        border: solid 4px #c97e83;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        box-shadow: 2px 2px #cccccc;
+
+
+        position: relative;
+    }
+
+    .how_much2:hover {
+        background-color: #c97e83;
+    }
+    
+    .how_much2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .how_much34 {
+        display: none;
+    }
+    
+    .how_much3 {
+        display: none;
+    }
+    
+    .how_much4 {
+        display: none;
+    }
+
+    .where span {
+        color: #ffffff;
+    }
+    
+    .where {
+        width: 25%;
+        float: left;
+        padding: 50px 35px;
+    }
+    
+    .where2 {
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        background-color: #942a2a;
+        box-shadow: 2px 2px #cccccc;
+
+        position: relative;
+    }
+    
+    .where2:hover {
+        background-color: #7a1010;
+        border: solid 4px #7a1010;
+    }
+    
+    .where2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .where34 {
+        display: none;
+    }
+    
+    .where3 {
+        display: none;
+    }
+    
+    .more span {
+        color: #49352a;
+    }
+    
+    .more {
+        width: 25%;
+        float: left;
+        padding: 50px 35px;
+    }
+    
+    .more2 {
+        border: solid 4px #942a2a;
+        border-radius: 16px;
+        width: 180px;
+        height: 180px;
+        padding: 40px 0;
+        box-shadow: 2px 2px #cccccc;
+
+        position: relative;
+    }
+
+    .more2:hover {
+        background-color:  #942a2a;
+        
+        span {
+            color: white;
+        }
+    }
+    
+    .more2 a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: 0;        
+    }
+
+    .more34 {
+        display: none;
+    }
+    
+    .more3 {
+        display: none;
+    }
+    
+    .more4 {
+        display: none;
+    }
+}
+
+
+// ---以下保存用
+// .joudan{
+//     // border: solid 2px gray;
+//     width: 100%;
+//     height: 300px;
+//     box-sizing: border-box;
+//     text-align: center;
+// }
+
+// .joudan a{
+//     font-size: 2.5vw;
+//     color: #49352a;
+// }
+
+// .whypicture{
+//     float: left;
+//     width: 75%;
+//     height: 300px;
+// }
+
+// .picture{
+//     // border: solid 2px gray;
+//     width: 67%;
+//     float: right;
+//     height: 200px;
+//     padding: 10px;
+//     margin: 50px 0 0 0;
+//     background: image-url("panda.gif") no-repeat center center;
+// }
+
+// // .picture2 {
+// //     border: solid 4px gray;
+// //     border-radius: 16px;
+// //     width: 100%;
+// //     height: 100%;
+// // }
+
+// .why {
+//     width: 33%;
+//     // height: auto;
+//     float: right;
+//     padding: 50px;
+// }
+
+// .why2{
+//     border: solid 4px #c97e83;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     box-shadow: 2px 2px #cccccc;
+// }
+
+// .what {
+//     // border: solid 2px gray;
+//     height: 300px;
+//     float: left;
+//     width: 25%;
+//     padding: 55px 55px 70px 55px;
+// }
+
+// .what2{
+//     border: solid 4px #942a2a;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     box-shadow: 2px 2px #cccccc;
+// }
+
+
+// // ---------------------
+// .gedan{
+//     // border: solid 2px gray;
+//     width: 100%;
+//     text-align: center;
+// }
+
+// .gedan a{
+//     font-size: 2.5vw;
+// }
+
+// .what_kind a {
+//     color: #ffffff;
+// }
+
+// .what_kind {
+//     // border: solid 2px gray;
+//     width: 25%;
+//     /* height: 300px; */
+//     float: left;
+//     padding: 50px;
+// }
+
+// .what_kind2 {
+//     border: solid 4px #c97e83;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     background-color: #c97e83;
+//     box-shadow: 2px 2px #cccccc;
+// }
+
+// .how_much a {
+//     color: #49352a;
+// }
+
+// .how_much {
+//     // border: solid 2px gray;
+//     width: 25%;
+//     /* height: 300px; */
+//     float: left;
+//     padding: 50px;
+// }
+
+// .how_much2 {
+//     border: solid 4px #c97e83;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     box-shadow: 2px 2px #cccccc;
+// }
+
+// .where a {
+//     color: #ffffff;
+// }
+
+// .where {
+//     // border: solid 2px gray;
+//     width: 25%;
+//     /* height: 300px; */
+//     float: left;
+//     padding: 50px;
+// }
+
+// .where2 {
+//     border: solid 4px #942a2a;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     background-color: #942a2a;
+//     box-shadow: 2px 2px #cccccc;
+// }
+
+// .more a {
+//     color: #49352a;
+// }
+
+// .more {
+//     // border: solid 2px gray;
+//     width: 25%;
+//     /* height: 300px; */
+//     float: left;
+//     padding: 50px;
+// }
+
+// .more2 {
+//     border: solid 4px #942a2a;
+//     border-radius: 16px;
+//     width: 100%;
+//     height: 100%;
+//     padding: 40px 0;
+//     box-shadow: 2px 2px #cccccc;
+// }

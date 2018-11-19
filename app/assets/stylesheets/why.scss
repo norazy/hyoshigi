@@ -1,0 +1,371 @@
+.why_haikei {
+    background-color: #49352a;
+    // height: 500px;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 900px;
+        height: 80px;
+        margin: 10px auto 20px;
+        
+        ul {
+            padding: 10px 10px 10px 0;
+            list-style: none;
+            
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+        
+            li {
+                width: 150px;
+                height: 40px;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                margin: 10px 20px 10px 0;
+                box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                padding: 10px 20px;
+                display: flex;
+                
+                position: relative;
+                
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    // margin-left: 0
+                }
+            
+                .ten{
+                        border-radius: 16px;
+                        height: 20px;
+                        width: 20px;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                   
+                    span {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                }
+
+                
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                
+                .midori {
+                    background-color: #93c47dff;
+                }
+                
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+                
+                
+            }
+            li:hover{
+                    background-color: #c97e83;
+                
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+    
+    .why_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 50px;
+        
+        .whychinese {
+            text-align: center;
+            color: #942a2a;
+            font-size: 25px;
+            padding: 6% 6% 3%;
+        }
+        
+        .whychinese2 {
+            // color: #000000;
+            color: #49352a;
+            font-size: 22px;
+            width: 46%;
+            margin: 10px auto;
+        }
+
+        .whychinese3 {
+            color: #49352a;
+            font-size: 22px;
+            width: 50%;
+            margin: 30px auto;
+            padding-top: 10px;
+            
+            span.whychinese32 {
+                display: block;
+                padding-left: 15%;
+                line-height: 45px;
+            }
+        } 
+
+    }
+    
+    .why_haikei3 {
+        // height: 500px;
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        // padding-bottom: 50px;
+    
+        .economy {
+            color: #942a2a;
+            font-size: 32px;
+            text-align: center;
+            width: 100%;
+            padding-top: 57px;
+            padding-bottom: 12px;
+        }
+        
+        .economy2 {
+            color: #49352a;
+            font-size: 21px;
+            width: 70%;
+            margin: 25px auto 45px;  
+            text-align: justify;
+        }
+        
+        .table2 {
+            // height: 450px;
+            width: 50%;
+            background-color: #fdb2b7;
+            float: left;
+            
+            .table4 {
+                padding: 5%;
+            }
+        }
+        
+        .tabletext{
+            float: right;
+            width: 48%;
+            padding-top: 30%;
+            padding-left: 2%;
+            
+            span {
+                display: block;
+                width: 100%;
+                font-size: 21px;
+                color: #49352a;
+            }
+        }
+        
+        .table3 {
+            width: 50%;
+            background-color: #fdb2b7;
+            float: right;
+            
+            .table5 {
+                padding: 5%;
+            }
+        }
+        
+        .tabletext2 {
+            float: left;
+            width: 48%;
+            padding-top: 25%;
+            padding-left: 8%;
+            
+            span {
+                display: block;
+                width: 100%;
+                font-size: 21px;
+                color: #49352a;            }
+        }
+    }
+    
+    .why_haikei4 {
+        // height: 500px;
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 30px;
+    
+        .information {
+            color: #942a2a;
+            font-size: 32px;
+            text-align: center;
+            width: 100%;
+            padding-top: 57px;            
+        }
+        
+        .information2 {
+            color: #49352a;
+            font-size: 21px;
+            width: 70%;
+            margin: 25px auto 45px;  
+            text-align: justify;
+        }
+        
+        .table {
+            font-size: 21px;
+            color: #49352a;
+
+            .table2 {
+                width: 50%;
+                background-color: #fdb2b7;
+                float: left;
+                // height: 450px;
+                
+                .table4 {
+                    padding: 7%;
+                }
+            }
+            
+            .tabletext{
+                float: right;
+                width: 48%;
+                padding-top: 38%;
+                padding-left: 5%;
+            
+                span {
+                    display: #49352a;
+                    width: 100%;
+                }
+            }
+    
+            
+            .table3 {
+                width: 50%;
+                background-color: #fdb2b7;
+                float: right;
+                
+                .table5 {
+                    padding: 7%;
+                }
+            }
+            
+            .tabletext2 {
+                float: left;
+                width: 48%;
+                padding-top: 35%;
+                padding-left: 8%;
+                
+                span {
+                    display: block;
+                    width: 100%;
+                    // font-size: 21px;
+                }
+            }
+        }
+            
+        .information3 {
+            color: #49352a;
+            font-size: 21px;
+            width: 70%;
+            margin: 50px auto;  
+            text-align: justify;
+        }
+    }
+    
+    .why_haikei5 {
+        width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        // padding-bottom: 50px;
+    
+        .culture {
+            color: #942a2a;
+            font-size: 32px;
+            text-align: center;
+            width: 100%;
+            padding-top: 57px;            
+        }
+        
+        .culturetext {
+            color: #49352a;
+            font-size: 21px;
+            width: 70%;
+            margin: 25px auto 45px;  
+            text-align: justify;            
+        }
+        
+        .table {
+            font-size: 21px;
+            color: #49352a;
+            
+            .table2 {
+                width: 50%;
+                background-color: #fdb2b7;
+                float: left;
+                // height: 450px;
+                
+                .table4 {
+                    padding: 7%;
+                }
+            }
+            
+            .tabletext{
+                float: right;
+                width: 48%;
+                padding-top: 33%;
+                padding-left: 5%;
+            
+                span {
+                    display: block;
+                    width: 100%;
+                    // font-size: 24px;
+                }
+            }
+    
+            .table3 {
+                width: 50%;
+                background-color: #fdb2b7;
+                float: right;
+                
+                .table5 {
+                    padding: 7%;
+                }
+            }
+            
+            .tabletext2 {
+                float: left;
+                width: 48%;
+                padding-top: 33%;
+                padding-left: 8%;
+                
+                span {
+                    display: block;
+                    width: 100%;
+                    // font-size: 24px;
+                }
+            }            
+        }
+
+    }
+}
+
+

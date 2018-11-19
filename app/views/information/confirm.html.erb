@@ -1,0 +1,96 @@
+<div class="infocf_haikei">
+    <div class="infocf_haikei2">
+        <div class="navigation">
+            <img src="/kakunin5.svg" alt="navi">
+        </div>
+        <span class='infoletter'>内容確認</span>
+        <h2></h2>
+
+        <div class="confirmform">
+            <%= form_for(@info, url: '/information') do |f| %>
+                <div class='name'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='name2'>
+                        <%= f.label :お名前 %>
+                    </div>
+                    <div class='name3'>
+                        <%= @info.lastname %><%= f.hidden_field :lastname %><br>
+                        <%= @info.firstname %><%= f.hidden_field :firstname %><br>
+                    </div>
+                </div>
+                <div class='namekana'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='namekana2'>
+                        <%= f.label :フリガナ %>
+                    </div>
+                    <div class='namekana3'>
+                        <%= @info.lastnamekana %><%= f.hidden_field :lastnamekana %><br>
+                        <%= @info.firstnamekana %><%= f.hidden_field :firstnamekana %><br>
+                    </div>
+                </div>
+                <div class='email'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='email2'>
+                        <%= f.label :Eメール %>
+                    </div>
+                    <div class='email3'>
+                        <%= @info.email %><br>
+                        <%= f.hidden_field :email %>
+                    </div>
+                </div>
+                <div class='address'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='address2'>
+                        <%= f.label :住所 %>
+                    </div>
+                    <div class='address3'>
+                        <%= @info.address %><br>
+                        <%= f.hidden_field :address %>
+                    </div>
+                </div>
+                <div class='phonenumber'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='phonenumber2'>
+                        <%= f.label :電話番号 %>
+                    </div>
+                    <div class='phonenumber3'>
+                        <div class="phonenumbertext">
+                            <%= @info.phonenumber1 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber1 %>
+                        <div class:'line3'>ー</div>                        
+                        <div class="phonenumbertext">
+                            <%= @info.phonenumber2 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber2 %>
+                        <div class:'line3'>ー</div>
+                        <div class="phonenumbertext">
+                            <%= @info.phonenumber3 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber3 %>
+                    </div>
+                </div>
+                <div class='line'></div>            
+    
+                <div class='submit'>
+                    <div class="createbutton">
+                        <%= f.submit '入力画面へ戻る', class: 'submit2', name: 'back'%>
+                    </div>
+                    <div class="createbutton2">
+                        <%= f.submit 'これで送信する', class: 'submit3' %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

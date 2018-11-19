@@ -1,0 +1,2 @@
+module HyoshigisHelper
+end

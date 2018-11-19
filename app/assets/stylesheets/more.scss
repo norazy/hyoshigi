@@ -1,0 +1,188 @@
+.more_haikei {
+    background-color: #942a2a;
+    // height: 500px;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 900px;
+        height: 80px;
+        margin: 10px auto 20px;
+        
+        ul {
+            padding: 10px 10px 10px 0;
+            list-style: none;
+            
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+        
+            li {
+                width: 150px;
+                height: 40px;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                margin: 10px 20px 10px 0;
+                box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                padding: 10px 20px;
+                display: flex;
+                
+                position: relative;
+                
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    // margin-left: 0
+                }
+            
+                .ten{
+                        border-radius: 16px;
+                        height: 20px;
+                        width: 20px;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                   
+                    span {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                }
+
+                
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                
+                .midori {
+                    background-color: #93c47dff;
+                }
+                
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+                
+                
+            }
+            li:hover{
+                    background-color: #c97e83;
+                
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .more_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        padding-bottom: 50px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+
+        .dai {
+            font-size: 36px;
+            color: #49352a;
+            padding: 30px 30px 0 30px;
+            -webkit-margin-after: 0;
+            text-align: center;
+        }
+        
+        .questions {
+            width: 65%;
+            margin: 0 auto;
+            padding: 20px;
+            border-bottom: 2px dashed #c97e83;
+            font-size: 22px;
+            text-align: left;
+            
+            .q_title{
+                color: #942a2a;
+                padding: 5px;
+                padding-top: 15px;
+            }
+            
+            .q_answer{
+                color: #49352a;
+                padding-top: 10px;
+                padding-left: 50px;
+            }
+        }
+        
+        .botan {
+            width: 65%;
+            display: flex;
+            margin: 30px auto;
+            
+            
+            .botan2 {
+                border-radius: 45px;
+                background-color: #c97e83;
+                margin: 30px 50px 30px 10px;
+                width: 230px;
+                height: 70px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+            .botan3 {
+                border-radius: 45px;
+                background-color: #c97e83;
+                margin: 30px 10px 30px 50px;
+                width: 230px;
+                height: 70px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+            .botan_moji {
+                text-align: center;
+                color: #ffffff;
+                font-size: 28px;
+                margin: 12px auto;
+            }
+        }
+
+    }
+}
+
+

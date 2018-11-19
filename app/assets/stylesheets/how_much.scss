@@ -1,0 +1,162 @@
+.how_much_haikei {
+    background-color: #49352a;
+    margin: 0;
+    padding: 130px 130px 50px 130px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 900px;
+        height: 80px;
+        margin: 10px auto 20px;
+        
+        ul {
+            padding: 10px 10px 10px 0;
+            list-style: none;
+            
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+        
+            li {
+                width: 150px;
+                height: 40px;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                margin: 10px 20px 10px 0;
+                box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+                padding: 10px 20px;
+                display: flex;
+                
+                position: relative;
+                
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                 }
+            
+                .ten{
+                        border-radius: 16px;
+                        height: 20px;
+                        width: 20px;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                   
+                    span {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                }
+
+                
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                
+                .midori {
+                    background-color: #93c47dff;
+                }
+                
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+                
+                
+            }
+            li:hover{
+                    background-color: #c97e83;
+                
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .how_much_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 60px;
+        text-align: center;
+        margin-top: 34px;
+
+
+        .pricetitle {
+            color: #49352a;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding: 60px 0 20px 0;
+        }
+        
+        .pricewords {
+            padding: 30px 0;
+
+            .pricetitle2 {
+                color: #942a2a;
+                font-weight: bold;
+                font-size: 22px;
+
+                span {
+                    text-decoration : underline
+                }
+
+            }
+            
+            .pricewords2 {
+                color: black;
+                padding-top: 15px;
+                font-size: 20px;                
+            }
+            
+        }
+    }
+
+    .how_much_haikei3{
+        width: 900px;
+        margin: 50px auto;
+        background-color: white;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+        padding-bottom: 45px;
+        text-align: center;
+
+        .price{
+            color: #49352a;
+            font-size: 36px;
+            text-align: center;
+            width: 100%;
+            padding: 40px 0 20px 0;
+        }
+            
+        .price2{
+            color: #942a2a;
+            font-size: 27px;
+            -webkit-margin-before: 0.5em;
+            -webkit-margin-after: 0.8em;
+            
+            span {
+                color: #000000;
+            }
+        }
+    }
+}
