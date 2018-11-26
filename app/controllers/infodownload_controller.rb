@@ -7,7 +7,6 @@ class InfodownloadController < ApplicationController
             render 'information/new'
         else
             @infodl.save
-            # send_file 'public/infodownload.pdf'
         end
     end
 
