@@ -1,0 +1,14 @@
+ja:
+    models:
+        infomation: 請求情報
+    attributes:
+        lastname: 「姓」
+        firstname: 「名」
+        lastnamekana: 「姓（カナ）」
+        firstnamekana: 「名（カナ）」
+        email: 「メールアドレス」
+        email_confirmation: 「メールアドレス（確認用）」
+        address: 「住所」
+        phonenumber1: 「電話番号」
+        phonenumber2: 「電話番号」
+        phonenumber3: 「電話番号」

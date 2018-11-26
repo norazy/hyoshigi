@@ -7,9 +7,20 @@
         <div class="infodownload">
             <span class='infoletter'>資料請求（ダウンロード）</span>
             <h2></h2>
+            <div class="errorsmessage">
+                <% if @infodl.errors.any? %>
+                    <h5>入力した内容にエラーが<%= @infodl.errors.count %>件あります</h5>
+                    <ul>
+                        <% @infodl.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
+
             <div class="infodownloadform">
-                <%= form_for(@info, url: '/information/confirm') do |f| %>
-                    <div class='name'>
+                <%= form_for(@infodl, url: '/infodownload', html: {id: 'reload'}) do |f| %>
+                     <div class='name'>
                         <div class='required'>
                             <span>必須</span>
                         </div>
@@ -46,18 +57,19 @@
         <div class="infomailing">
             <span class='infoletter'>資料請求（郵送）</span>
             <h2></h2>
+            <!--フォームにエラーがある時に表示される↓-->
+            <div class="errorsmessage">
+                <% if @info.errors.any? %>
+                    <h5>入力した内容にエラーが<%= @info.errors.count %>件あります</h5>
+                    <ul>
+                        <% @info.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
             <div class="infomailform">
                 <%= form_for(@info, url: 'information/confirm') do |f| %>
-                    <!--フォームにエラーがある時に表示される↓-->
-                    <% if @info.errors.any? %>
-                        <h3>入力した内容にエラーが<%= @info.errors.count %>件あります</h3>
-                        <ul>
-                            <% @info.errors.full_messages.each do |message| %>
-                                <li><%= message %></li>
-                            <% end %>
-                        </ul>
-                    <% end %>
-
                     <div class='name'>
                         <div class='required'>
                             <span>必須</span>
@@ -166,3 +178,53 @@
         </div>
     </div>
 </div>
+
+<script>
+// $("#reload").submit(function() {
+//     setInterval(function () {
+//       if ($.cookie("downloaded")) {
+//         $.removeCookie("downloaded", { path: "/" });
+//         alert("ダウンロード完了");
+//       }
+//     }, 1000);
+//     return false;
+// });
+
+// $('#reload').submit(function(event) {
+//         // event.preventDefault();
+//         // window.open('/');
+//         setTimeout(function() { document.location = '/'}, 500)
+//       });
+
+
+// $(document).ready(function(){
+//     setInterval(function(){
+//         $('#reload').on('submit',function(){
+//             window.alert('テスト');
+//             window.location.href = '/';
+//         //   return false;
+//         });        
+//     }, 3000)
+// });
+
+// $(document).ready(function(){
+//     $('#reload').on('submit',function(){
+//         window.alert('テスト');
+//         window.location.href = '/download';
+//         return false;
+//     });
+// });
+
+// $("#reload").submit(function() {
+//     window.location.href = '/';
+//     //  $(this).attr('action', '/infodownload');
+//      return false;
+// });
+
+// document.getElementById('reload').onsubmit=function(){
+//     // debugger
+//     window.alert('テスト');
+//     window.location.href = "/information";
+//     return false;
+// };
+</script>

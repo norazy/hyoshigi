@@ -55,7 +55,6 @@
                     <i class="material-icons">content_copy</i><br>
                     <span>住所をコピー</span>
                 </button>
-
             </div>
         </div>
 
@@ -102,7 +101,7 @@ function copyToClipboard() {
         alert("コピーできました！ : " + copyTarget.value);
 }
  
- $(document).on("turbolinks:load", function() {
+$(document).on("turbolinks:load", function() {
     let pictureLength = 5;
     let html = "";
     
@@ -134,4 +133,6 @@ function copyToClipboard() {
   }     
 
  })
+ 
+ 
 </script>

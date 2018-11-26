@@ -2,18 +2,18 @@ class InformationController < ApplicationController
 
 def new
     @info = Information.new
+    @infodl = Infodownload.new
 end
 
 def confirm
+    @infodl = Infodownload.new
     @info = Information.new(info_params)
+    @info.email_confirmation = params[:information][:email_confirmation]
     render :new if @info.invalid?
-    # binding.pry
 end
 
 def create
     @info = Information.new(info_params)
-    binding.pry
-    # render :new if params[:back]
     if params[:back]
         render :new
     else
@@ -23,11 +23,12 @@ def create
     # else
     #   render :new
     end
+    # render :new if params[:back]
 end
 
 private
 def info_params
-    params.require(:information).permit(:lastname, :firstname, :lastnamekana, :firstnamekana, :email, :email_confirmation, :address, :phonenumber1, :phonenumber2, :phonenumber3)
+    params.require(:information).permit(:lastname, :firstname, :lastnamekana, :firstnamekana, :email, :address, :phonenumber1, :phonenumber2, :phonenumber3)
 end
 
 end

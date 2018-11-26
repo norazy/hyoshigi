@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181112070949) do
+ActiveRecord::Schema.define(version: 20181121093831) do
+
+  create_table "infodownloads", force: :cascade do |t|
+    t.string   "lastname",   limit: 255, null: false
+    t.string   "firstname",  limit: 255, null: false
+    t.string   "email",      limit: 255, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "information", force: :cascade do |t|
     t.string   "lastname",      limit: 255, null: false

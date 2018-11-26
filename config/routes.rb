@@ -15,4 +15,9 @@ Rails.application.routes.draw do
     get 'information' =>'information#new'
     post 'information' => 'information#create'
     post 'information/confirm' => 'information#confirm'
+    
+    # フォームの中のダウンロードのルーティング
+    post 'infodownload' => 'infodownload#create'
+    # get 'infodownload' => 'infodownload#done'
+    get 'download' => 'infodownload#download'
 end
