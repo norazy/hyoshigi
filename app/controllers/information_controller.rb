@@ -14,8 +14,6 @@ end
 
 def create
     @info = Information.new(info_params)
-
-
     if params[:back]
         render :new
     else
