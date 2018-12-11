@@ -43,12 +43,17 @@
         <div class="gengo">
           <div class="gengo2">
             <div class="gengo22">
-              <a href="#">中文</a>
+              <!--<a href="#">中文</a>-->
+              <%= link_to('中文', i18n_url_for(params.merge(locale: :zh))) %>
             </div>
           </div>
           <div class="gengo2">
             <div class="gengo22">
-              <a href="#">En<span>glish</span></a>
+              <!--<a href="#">En<span>glish</span></a>-->
+              <%#= link_to('En', i18n_url_for(params.merge(locale: :en))) %>
+              <%= link_to(i18n_url_for(params.merge(locale: :en))) do %>
+                En<span>lish</span>
+              <% end %>
             </div>
           </div>
         </div>
@@ -62,13 +67,13 @@
           </div>
           <div class="annai2">
             <div class="annai3">
-              <a href="#"></a>
+              <a href="/trial"></a>
               <span>無料<br>体験</span>
             </div>
           </div>
           <div class="annai2">
             <div class="annai3 nyukai">
-              <a href="#"></a>
+              <a href="/entry"></a>
               <span>入会<br>申込</span>              
             </div>
           </div>
@@ -85,9 +90,9 @@
     <div class="fjoudan">
       <div class="links">
         <ul>
-            <li><a href="#">会社案内</a></li>
-            <li><a href="#">お問合せ</a></li>
-            <li><a href="#">採用情報</a></li>
+            <li><a href="hyoshigis/aboutus">会社案内</a></li>
+            <li><a href="/inquiry">お問合せ</a></li>
+            <li><a href="hyoshigis/recruit">採用情報</a></li>
             <li><a href="hyoshigis/more">よくある質問</a></li>
         </ul>
       </div>

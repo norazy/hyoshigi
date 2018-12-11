@@ -1,0 +1,264 @@
+<div class="entry_haikei">
+    <div class='entry_haikei2'>
+        <div class='flow'>
+            <span class='entry_title'>入会までの流れ</span>
+            <h2></h2>
+            <div class="flow2">
+                <img src="/entry.svg" alt="flow">
+            </div>
+        </div>
+
+        <div class='entry_form'>
+            <span class='entry_title'>入会申込フォーム</span>
+            <h2></h2>
+            
+            <!--フォームにエラーがある時に表示される↓-->
+            <div class="errorsmessage">
+                <% if @entry.errors.any? %>
+                    <h5>入力した内容にエラーが<%= @entry.errors.count %>件あります</h5>
+                    <ul>
+                        <% @entry.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
+            
+            <div class="entry_form2">
+                <%= form_for(@entry, url: 'entry/confirm') do |f| %>
+                    <!--保護者情報-->
+                    <div class="parents">
+                        <div class="entry_subtitle">
+                            <div class="entry_subtitle2">
+                                <span>1</span>
+                            </div>
+                            <div class="entry_subtitle3">
+                                <span>保護者情報</span>
+                            </div>
+                        </div>
+                        <h2 style="margin-left: 4rem;"></h2>
+                        <div class="parents_form">
+                            <div class='name'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :お名前 %>
+                                </div>
+                                <div class='name3'>
+                                    <%= f.text_field :p_lastname, placeholder: '姓' %>
+                                    <%= f.text_field :p_firstname, placeholder: '名' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>
+                            <div class='name'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :フリガナ %>
+                                </div>
+                                <div class='name3'>
+                                    <%= f.text_field :p_lastnamekana, placeholder: 'セイ' %>
+                                    <%= f.text_field :p_firstnamekana, placeholder: 'メイ' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>    
+                            <div class='email'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :Eメール %>
+                                </div>
+                                <div class='email3'>
+                                    <%= f.text_field :email, placeholder: 'メールアドレス' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>                        
+                            <div class='address'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :住所 %>
+                                </div>
+                                <div class='address3'>
+                                    <%= f.text_field :address, placeholder: '住所' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>
+                            <div class='phonenumber'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :phonenumber1, "電話番号(半角数字でご記入ください)" %>
+                                </div>                            
+                            </div>
+                            <div class='phonenumber7'>
+                                <div class='emptybox'></div>
+                                <div class='phonenumber3'>
+                                    <%= f.text_field :phonenumber1 %>
+                                    <!-- f.text_field :phonenumber1, placeholder: '数字のみでご記入ください' -->
+                                </div>
+                                <div class="line2">ー</div>
+                                <div class='phonenumber3'>
+                                    <%= f.text_field :phonenumber2 %>
+                                </div>
+                                <div class="line2">
+                                    ー
+                                </div>
+                                <div class='phonenumber3'>
+                                    <%= f.text_field :phonenumber3 %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--お子様情報-->
+                    <div class="child">
+                        <div class="entry_subtitle">
+                            <div class="entry_subtitle2">
+                                <span>2</span>
+                            </div>
+                            <div class="entry_subtitle3">
+                                <span>お子様情報</span>
+                            </div>
+                        </div>
+                        <h2 style="margin-left: 4rem;"></h2>
+                        <div class='child_form'>
+                            <div class='name'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :お名前 %>
+                                </div>
+                                <div class='name3'>
+                                    <%= f.text_field :lastname, placeholder: '姓' %>
+                                    <%= f.text_field :firstname, placeholder: '名' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>
+                            <div class='name'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle'>
+                                    <%= f.label :フリガナ %>
+                                </div>
+                                <div class='name3'>
+                                    <%= f.text_field :lastnamekana, placeholder: 'セイ' %>
+                                    <%= f.text_field :firstnamekana, placeholder: 'メイ' %>
+                                </div>
+                            </div>
+                            <div class='line'></div>
+                            <div class='birthday'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :生年月日%>
+                                </div>
+                            </div>
+                            <div class='birthday2'>
+                                <div class='emptybox2'></div>
+                                <%= f.date_select :birthday,
+                                      start_year: (Time.now.year - 3),
+                                      end_year:   (Time.now.year - 10),
+                                      prompt: { year: '', month: '', day: ''} %>
+                            </div>                                
+                            <div class='line'></div>
+                            <div class='gender'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :性別%>
+                                </div>
+                            </div>
+                            <div class='gender2'>
+                                <div class='emptybox3'></div>
+                                <div class='gender3'>
+                                    <%= f.radio_button(:gender, "1") %>
+                                    <%= f.label(:gender, "男", value: "1")  %>
+                                </div>
+                                <div class='gender4'>
+                                    <%= f.radio_button(:gender, "2") %>
+                                    <%= f.label(:gender, "女", value: "2")  %>
+                                </div>                                
+                            </div>
+                            <div class='line'></div>
+                            <div class="course">
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :コース選択%>                                    
+                                </div>                            
+                            </div>
+                            <div class='course2'>
+                                <div class='emptybox4'></div>
+                                <div class='course3'>
+                                    <%= f.select :course, [["週１　グループ　１万/月", "1"], ["週２　グループ　２万/月", "2"], ["週１　個別　３万/月", "3"], ["週２　個別　６万/月", "6"]] %>
+                                </div>
+                            </div>
+                            <div class='line'></div>
+                            <div class='entry_month'>
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :開始希望月%>                                    
+                                </div>
+                            </div>
+                            <div class='entry_month2'>
+                                <div class='emptybox5'></div>
+                                <div class='entry_month3'>
+                                    <%= f.select :joindate,  [["２０１９年　２月", "2019-02-01"], ["２０１９年　５月", "2019-05-01"], ["２０１９年　８月", "2019-08-01"], ["２０１９年　１１月", "2019-11-01"]] %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--希望面談日-->
+                    <div class="firstmeeting">
+                        <div class="entry_subtitle">
+                            <div class="entry_subtitle2">
+                                <span>3</span>
+                            </div>
+                            <div class="entry_subtitle3">
+                                <span>初回面談</span>
+                            </div>
+                        </div>
+                        <h2 style="margin-left: 4rem;"></h2>
+                        <div class='firstmeeting2'>
+                            <div class="firstmeeting3">
+                                <div class='required'>
+                                    <span>必須</span>
+                                </div>
+                                <div class='labeltitle2'>
+                                    <%= f.label :ご希望の面談日時をお選びください%>                                    
+                                </div>
+                            </div>
+                            <div class='firstmeeting4'>
+                                <div class="emptybox6"></div>
+                                <div class='firstmeeting5'>
+                                    <%= f.select :date, @entrydateView.map.with_index{|t, index| [t, @entrydate[index].entrydate]}, prompt: "希望日を選択してください" %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='submit'>
+                        <div class="privacy">
+                            <a href="#">個人情報の取り扱いについて</a>
+                        </div>
+                        <%= f.submit '確認画面へ進む', class: 'submit2' %>
+                    </div>
+                    <div class='notyet'>
+                        <span>＊このボタンをクリックしても<br>お申し込みは確定しません。</span>
+                    </div>
+                <% end %> 
+            </div>
+        </div>
+    </div>
+</div>

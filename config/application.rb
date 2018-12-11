@@ -16,14 +16,25 @@ module Hyoshigi
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
     
+    # ↓デフォルトの言語を日本語にする
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
-    
+    # ↓使える言語の種類
+    config.i18n.available_locales = %i(ja en zh)
+    # https://qiita.com/misopeso/items/9abaeb1cd41ab14e20ce
+    # ↓In order to silence the warning edit the application.rb file
+    # 指定してない言語が選ばれた時にエラーを表示させないためのもの
+    config.i18n.enforce_available_locales = true
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # バリデーションでエラーメッセージが出た後にビューファイルのhtmlが崩れるのを防ぐためのコード
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
+      html_tag
+    }
   end
 end

@@ -1,0 +1,96 @@
+<div class="trialcf_haikei">
+    <div class="trialcf_haikei2">
+        <div class="trcfnavigation">
+            <img src="/kakunin5.svg" alt="navi">
+        </div>
+        <span class='trcfletter'>内容確認</span>
+        <h2></h2>
+
+        <div class="trconfirmform">
+            <%= form_for(@trial, url: '/trial') do |f| %>
+                <div class="age">
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>                   
+                    <div class='age2'>
+                        <%= f.label :年齢 %>
+                    </div>
+                    <div class='age3'>
+                        <%#= @trial.age %><%#= f.hidden_field :age %>
+                        <%= @trial.age.to_s + " 〜 " + (@trial.age + 3).to_s + " 歳" %><%= f.hidden_field :age %>
+                    </div>
+                </div>
+                <div class="date">
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>                    
+                    <div class='date2'>
+                        <%= f.label :希望日 %>
+                    </div>
+                    <div class='date3'>
+                        <%#= @trial.date %><%#= f.hidden_field :date %>
+                        <%= @trial.date.strftime("%-m月%-d日 #{%w(日 月 火 水 木 金 土)[@trial.date.wday]}曜日 %H:%M  ") %><%= f.hidden_field :date %><br>
+                    </div>
+                </div>
+                <div class='name'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='name2'>
+                        <%= f.label :お名前 %>
+                    </div>
+                    <div class='name3'>
+                        <%= @trial.lastname %><%= f.hidden_field :lastname %><br>
+                        <%= @trial.firstname %><%= f.hidden_field :firstname %><br>
+                    </div>
+                </div>
+                <div class='email'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='email2'>
+                        <%= f.label :Eメール %>
+                    </div>
+                    <div class='email3'>
+                        <%= @trial.email %><br>
+                        <%= f.hidden_field :email %>
+                    </div>
+                </div>
+                <div class='phonenumber'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='phonenumber2'>
+                        <%= f.label :電話番号 %>
+                    </div>
+                    <div class='phonenumber3'>
+                        <div class="phonenumbertext">
+                            <%= @trial.phonenumber1 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber1 %>
+                        <div class:'line3'>ー</div>                        
+                        <div class="phonenumbertext">
+                            <%= @trial.phonenumber2 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber2 %>
+                        <div class:'line3'>ー</div>
+                        <div class="phonenumbertext">
+                            <%= @trial.phonenumber3 %>
+                        </div>
+                        <%= f.hidden_field :phonenumber3 %>
+                    </div>
+                </div>
+                <div class='line'></div>            
+    
+                <div class='submit'>
+                    <div class="createbutton">
+                        <%= f.submit '入力画面へ戻る', class: 'submit2', name: 'back'%>
+                    </div>
+                    <div class="createbutton2">
+                        <%= f.submit 'これで送信する', class: 'submit3' %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

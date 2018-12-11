@@ -1,0 +1,219 @@
+<div class="entrycf_haikei">
+    <div class="entrycf_haikei2">
+        <div class="entrycfnavigation">
+            <img src="/kakunin5.svg" alt="navi">
+        </div>
+        <span class='entrycfletter'>内容確認</span>
+        <h2></h2>
+        
+        <div class='entrycf'>
+            <%= form_for(@entry, url: '/entry') do |f| %>
+                <div class="parents_cf">
+                    <div class="entry_subtitle">
+                        <div class="entry_subtitle2">
+                            <span>1</span>
+                        </div>
+                        <div class="entry_subtitle3">
+                            <span>保護者情報</span>
+                        </div>
+                    </div>
+                    <h2 style="margin-left: 4rem;"></h2>
+                    <div class='parents_cf2'>
+                        <div class='name'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :お名前 %>
+                            </div>
+                            <div class='name3'>
+                                <%= @entry.p_lastname %><%= f.hidden_field :p_lastname %><br>
+                                <%= @entry.p_firstname %><%= f.hidden_field :p_firstname %><br>
+                            </div>
+                        </div>
+                        <div class='name'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :フリガナ %>
+                            </div>
+                            <div class='name3'>
+                                <%= @entry.p_lastnamekana %><%= f.hidden_field :p_lastnamekana %><br>
+                                <%= @entry.p_firstnamekana %><%= f.hidden_field :p_firstnamekana %><br>
+                            </div>
+                        </div>
+                        <div class='email'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :Eメール %>
+                            </div>
+                            <div class='email3'>
+                                <%= @entry.email %><br>
+                                <%= f.hidden_field :email %>
+                            </div>
+                        </div>
+                        <div class='address'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :住所 %>
+                            </div>
+                            <div class='address3'>
+                                <%= @entry.address %><br>
+                                <%= f.hidden_field :address %>
+                            </div>
+                        </div>
+                        <div class='phonenumber'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :電話番号 %>
+                            </div>
+                            <div class='phonenumber3'>
+                                <div class="phonenumbertext">
+                                    <%= @entry.phonenumber1 %>
+                                </div>
+                                <%= f.hidden_field :phonenumber1 %>
+                                <div class:'line3'>ー</div>                        
+                                <div class="phonenumbertext">
+                                    <%= @entry.phonenumber2 %>
+                                </div>
+                                <%= f.hidden_field :phonenumber2 %>
+                                <div class:'line3'>ー</div>
+                                <div class="phonenumbertext">
+                                    <%= @entry.phonenumber3 %>
+                                </div>
+                                <%= f.hidden_field :phonenumber3 %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class='child_cf'>
+                    <div class="entry_subtitle">
+                        <div class="entry_subtitle2">
+                            <span>2</span>
+                        </div>
+                        <div class="entry_subtitle3">
+                            <span>お子様情報</span>
+                        </div>
+                    </div>
+                    <h2 style="margin-left: 4rem;"></h2>
+                    <div class='child_cf2'>
+                        <div class='name'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :お名前 %>
+                            </div>
+                            <div class='name3'>
+                                <%= @entry.lastname %><%= f.hidden_field :lastname %><br>
+                                <%= @entry.firstname %><%= f.hidden_field :firstname %><br>
+                            </div>
+                        </div>
+                        <div class='name'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :フリガナ %>
+                            </div>
+                            <div class='name3'>
+                                <%= @entry.lastnamekana %><%= f.hidden_field :lastnamekana %><br>
+                                <%= @entry.firstnamekana %><%= f.hidden_field :firstnamekana %><br>
+                            </div>
+                        </div>
+                        <div class='birthday'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :生年月日 %>
+                            </div>
+                            <div class='birthday2'>
+                                <%= @entry.birthday.strftime("%-Y年%-m月%-d日") %><%= f.hidden_field :birthday %><br>
+                            </div>
+                        </div>
+                        <div class='gender'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :性別 %>
+                            </div>
+                            <div class='gender2'>
+                                <%= @gender %><%= f.hidden_field :gender %>
+                            </div>
+                        </div>
+                        <div class='course'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :コース %>
+                            </div>
+                            <div class='course2'>
+                                <%= @course %><%= f.hidden_field :course %>
+                            </div>
+                        </div>                        
+                        <div class='entry_month'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='entrycflabel'>
+                                <%= f.label :開始月 %>
+                            </div>
+                            <div class='entry_month2'>
+                                <%= @entry_month %><%= f.hidden_field :joindate %>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                
+                <div class='firstmeeting'>
+                    <div class="entry_subtitle">
+                        <div class="entry_subtitle2">
+                            <span>3</span>
+                        </div>
+                        <div class="entry_subtitle3">
+                            <span>初回面談日</span>
+                        </div>
+                    </div>
+                    <h2 style="margin-left: 4rem;"></h2>
+                    <div class='firstmeeting2'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='entrycflabel'>
+                            <%= f.label :希望日時 %>
+                        </div>
+                        <div class='firstmeeting3'>
+                            <%= @entry.date.strftime("%-m月%-d日 #{%w(日 月 火 水 木 金 土)[@entry.date.wday]}曜日 %H:%M  ") %><%= f.hidden_field :date %><br>
+                        </div>
+                    </div>
+                </div>
+                <div class='line'></div>
+                <div class="areyousure">
+                    <span>以上の内容で申し込みますか。</span>
+                </div>
+                <div class='submit'>
+                    <div class="createbutton">
+                        <%= f.submit '入力画面へ戻る', class: 'submit2', name: 'back'%>
+                    </div>
+                    <div class="createbutton2">
+                        <%= f.submit 'これで送信する', class: 'submit3' %>
+                        <div class='notyet'>
+                            <span>＊クリック後、<br>お申し込みは確定します。</span>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

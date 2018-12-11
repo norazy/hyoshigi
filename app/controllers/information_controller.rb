@@ -9,6 +9,7 @@ def confirm
     @infodl = Infodownload.new
     @info = Information.new(info_params)
     @info.email_confirmation = params[:information][:email_confirmation]
+    # binding.pry if @info.invalid?
     render :new if @info.invalid?
 end
 
@@ -18,12 +19,7 @@ def create
         render :new
     else
         @info.save
-    #   redirect_to @task, notice: 'Task was successfully created.'
-    # @taskにするとcreateのビューを表示してくれるの
-    # else
-    #   render :new
     end
-    # render :new if params[:back]
 end
 
 private

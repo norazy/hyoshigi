@@ -19,4 +19,10 @@ class HyoshigisController < ApplicationController
 
     def more
     end
+    
+    def aboutus
+    end
+    
+    def recruit
+    end
 end

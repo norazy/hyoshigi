@@ -11,7 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181121093831) do
+ActiveRecord::Schema.define(version: 20181203081718) do
+
+  create_table "entries", force: :cascade do |t|
+    t.string   "p_lastname",      limit: 255, null: false
+    t.string   "p_firstname",     limit: 255, null: false
+    t.string   "p_lastnamekana",  limit: 255, null: false
+    t.string   "p_firstnamekana", limit: 255, null: false
+    t.string   "email",           limit: 255, null: false
+    t.string   "address",         limit: 255, null: false
+    t.string   "phonenumber1",    limit: 255, null: false
+    t.string   "phonenumber2",    limit: 255, null: false
+    t.string   "phonenumber3",    limit: 255, null: false
+    t.string   "lastname",        limit: 255, null: false
+    t.string   "firstname",       limit: 255, null: false
+    t.string   "lastnamekana",    limit: 255, null: false
+    t.string   "firstnamekana",   limit: 255, null: false
+    t.date     "birthday",                    null: false
+    t.integer  "gender",          limit: 4,   null: false
+    t.integer  "course",          limit: 4,   null: false
+    t.date     "joindate",                    null: false
+    t.datetime "date",                        null: false
+    t.string   "securenumber",    limit: 255, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "entrydates", force: :cascade do |t|
+    t.datetime "entrydate"
+    t.integer  "capacity",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "infodownloads", force: :cascade do |t|
     t.string   "lastname",   limit: 255, null: false
@@ -33,6 +64,37 @@ ActiveRecord::Schema.define(version: 20181121093831) do
     t.string   "phonenumber3",  limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "inquiries", force: :cascade do |t|
+    t.string   "lastname",      limit: 255,   null: false
+    t.string   "firstname",     limit: 255,   null: false
+    t.string   "lastnamekana",  limit: 255,   null: false
+    t.string   "firstnamekana", limit: 255,   null: false
+    t.string   "email",         limit: 255,   null: false
+    t.text     "content",       limit: 65535, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "trialdates", force: :cascade do |t|
+    t.datetime "trialdate"
+    t.integer  "capacity",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "trials", force: :cascade do |t|
+    t.integer  "age",          limit: 4,   null: false
+    t.datetime "date",                     null: false
+    t.string   "lastname",     limit: 255, null: false
+    t.string   "firstname",    limit: 255, null: false
+    t.string   "email",        limit: 255, null: false
+    t.string   "phonenumber1", limit: 255, null: false
+    t.string   "phonenumber2", limit: 255, null: false
+    t.string   "phonenumber3", limit: 255, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
