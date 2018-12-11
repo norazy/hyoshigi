@@ -1,0 +1,139 @@
+<div class="trial_haikei">
+    <div class='trial_haikei2'>
+        <div class='flow'>
+            <span class='trial_title'>無料体験・個別相談の流れ</span>
+            <h2></h2>
+            <div class="flow2">
+                <img src="/flow3.svg" alt="flow">
+            </div>
+        </div>
+
+        <div class='appform'>
+            <span class='trial_title'>申し込みフォーム</span>
+            <h2></h2>
+            <!--フォームにエラーがある時に表示される↓-->
+            <div class="errorsmessage">
+                <% if @trial.errors.any? %>
+                    <h5>入力した内容にエラーが<%= @trial.errors.count %>件あります</h5>
+                    <ul>
+                        <% @trial.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
+
+            <div class="appform2">
+                <%= form_for(@trial, url: 'trial/confirm') do |f| %>
+                    <div class='age'>
+                        <!--年齢タイトル-->
+                        <div class='subtitle'>
+                            <div class='subtitle2'>
+                                <span>1</span>
+                            </div>
+                            <div class='subtitle3'>
+                                <span>お子さんの年齢</span>
+                            </div>
+                        </div>
+                        <div class='age3'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>                            
+                            <div class='age32'>
+                                <%= f.radio_button(:age, "3") %>
+                                <%= f.label(:age, "３〜６歳", value: "3")  %>
+                            </div>
+                            <div class='age33'>
+                                <%= f.radio_button(:age, "7") %>
+                                <%= f.label(:age, "７〜１０歳", value: "7")  %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='date'>
+                        <div class='subtitle'>
+                            <div class='subtitle2'>
+                                <span>2</span>
+                            </div>
+                            <div class='subtitle3'>
+                                <span>ご希望の体験日</span>
+                            </div>
+                        </div>
+                        <div class='dateselect2'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>                            
+                            <div class='dateselect'>
+                                <%= f.select :date, @trialdateView.map.with_index{|t, index| [t, @trialdate[index].trialdate]}, prompt: "希望日を選択してください" %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='subtitle'>
+                        <div class='subtitle2'>
+                            <span>3</span>
+                        </div>
+                        <div class='subtitle3'>
+                            <span>連絡先記入</span>
+                        </div>
+                    </div>
+                    <h2 style="margin-left: 4rem;"></h2>
+                    <div class="contactform">
+                        <div class='name'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='name2'>
+                                <%= f.label :お名前 %>
+                            </div>
+                            <div class='name3'>
+                                <%= f.text_field :lastname, placeholder: '姓' %>
+                                <%= f.text_field :firstname, placeholder: '名' %>
+                            </div>
+                        </div>
+                        <div class='email'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='email2'>
+                                <%= f.label :Eメール %>
+                            </div>
+                            <div class='email3'>
+                                <%= f.text_field :email, placeholder: 'メールアドレス' %>
+                            </div>
+                        </div>
+                        <div class='phonenumber'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='phonenumber2'>
+                                <%= f.label :phonenumber1, "電話番号(半角数字でご記入ください)" %>
+                            </div>                            
+                        </div>
+                        <div class='phonenumber7'>
+                            <div class='emptybox'></div>
+                            <div class='phonenumber3'>
+                                <%= f.text_field :phonenumber1 %>
+                                <!-- f.text_field :phonenumber1, placeholder: '数字のみでご記入ください' -->
+                            </div>
+                            <div class="line2">ー</div>
+                            <div class='phonenumber3'>
+                                <%= f.text_field :phonenumber2 %>
+                            </div>
+                            <div class="line2">
+                                ー
+                            </div>
+                            <div class='phonenumber3'>
+                                <%= f.text_field :phonenumber3 %>
+                            </div>
+                        </div>
+                        <div class='submit'>
+                            <div class="privacy">
+                                <a href="#">個人情報の取り扱いについて</a>
+                            </div>
+                            <%= f.submit '確認画面へ進む', class: 'submit2' %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

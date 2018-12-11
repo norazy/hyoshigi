@@ -10,5 +10,16 @@ ja:
         email_confirmation: 「メールアドレス（確認用）」
         address: 「住所」
         phonenumber1: 「電話番号」
-        phonenumber2: 「電話番号」
-        phonenumber3: 「電話番号」
+        phonenumber2: 「電話番号2」
+        phonenumber3: 「電話番号3」
+        age: 「年齢」
+        date: 「希望日」
+        content: 「お問合せ内容」
+        p_lastname: 「（保護者）姓」
+        p_firstname: 「（保護者）名」
+        p_lastnamekana: 「（保護者）セイ」
+        p_firstnamekana: 「（保護者）メイ」
+        birthday: 「生年月日」
+        gender: 「性別」
+        course: 「コース」
+        joindate: 「希望開始月」

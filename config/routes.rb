@@ -1,23 +1,43 @@
 Rails.application.routes.draw do
-    root 'hyoshigis#index'
+    scope '(:locale)', locale: /#{I18n.available_locales.map(&:to_s).join('|')}/ do
+    # ↑ウェブサイトにアクセスした際に、言語コードをパスに含めるようルーティングを設定します。
+        root 'hyoshigis#index'
+        # トップページのルーティング
+        get 'hyoshigis' => 'hyoshigis#index'
+        get 'hyoshigis/why' => 'hyoshigis#why'
+        get 'hyoshigis/what' => 'hyoshigis#what'
+        get 'hyoshigis/what_kind' => 'hyoshigis#what_kind'
+        get 'hyoshigis/how_much' => 'hyoshigis#how_much'
+        get 'hyoshigis/where' => 'hyoshigis#where'
+        get 'hyoshigis/more' => 'hyoshigis#more'
+        get 'hyoshigis/aboutus' => 'hyoshigis#aboutus'
+        get 'hyoshigis/recruit' => 'hyoshigis#recruit'
+        
+        # 資料請求（郵送）
+        get 'information' =>'information#new'
+        post 'information' => 'information#create'
+        post 'information/confirm' => 'information#confirm'
+        
+        # 資料請求（ダウンロード）
+        post 'infodownload' => 'infodownload#create'
+        # ダウンロード用のパスでビューはない
+        get 'download' => 'infodownload#download'
+        
+        #体験会
+        get 'trial' => 'trial#new'
+        post 'trial' => 'trial#create'
+        post 'trial/confirm' => 'trial#confirm'
+        
+        # お問合せ
+        get 'inquiry' => 'inquiry#new'
+        post 'inquiry' => 'inquiry#create'
+        post 'inquiry/confirm' => 'inquiry#confirm'
     
-    # トップページのルーティング
-    get 'hyoshigis' => 'hyoshigis#index'
-    get 'hyoshigis/why' => 'hyoshigis#why'
-    get 'hyoshigis/what' => 'hyoshigis#what'
-    get 'hyoshigis/what_kind' => 'hyoshigis#what_kind'
-    get 'hyoshigis/how_much' => 'hyoshigis#how_much'
-    get 'hyoshigis/where' => 'hyoshigis#where'
-    get 'hyoshigis/more' => 'hyoshigis#more'
-    
-    # フォームページのルーティング
-    # resources :information, only: [:new, :create]
-    get 'information' =>'information#new'
-    post 'information' => 'information#create'
-    post 'information/confirm' => 'information#confirm'
-    
-    # フォームの中のダウンロードのルーティング
-    post 'infodownload' => 'infodownload#create'
-    # get 'infodownload' => 'infodownload#done'
-    get 'download' => 'infodownload#download'
+        # 入会申し込み
+        get 'entry' => 'entry#new'
+        post 'entry' => 'entry#create'
+        post 'entry/confirm' => 'entry#confirm'
+        # ↓これで大丈夫なのかな？
+        post 'entry/entry/confirm' => 'entry#confirm'
+    end
 end

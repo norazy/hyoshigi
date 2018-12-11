@@ -1,0 +1,108 @@
+<div class="inquiry_haikei">
+    <div class='inquiry_haikei2'>
+        <div class="navigation">
+            <img src="/kinyuu2.svg" alt="navi">
+        </div>
+        <div class="inquirynotes">
+            <span>よくある質問をご覧いただけます。</span>
+            <a href="/hyoshigis/more">▶︎よくある質問</a>
+        </div>
+        <div class="inquiry_form">
+            <span class='inquiry_letter'>お問合せフォーム</span>
+            <h2></h2>
+            <!--フォームにエラーがある時に表示される↓-->
+            <div class="errorsmessage">
+                <% if @inquiry.errors.any? %>
+                    <h5>入力した内容にエラーが<%= @inquiry.errors.count %>件あります</h5>
+                    <ul>
+                        <% @inquiry.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
+            </div>
+            <!--記入フォーム-->
+            <div class="inquiry_form2">
+                <%= form_for(@inquiry, url: 'inquiry/confirm') do |f| %>
+                    <div class='name'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='name2'>
+                            <%= f.label :お名前 %>
+                        </div>
+                        <div class='name3'>
+                            <%= f.text_field :lastname, placeholder: '姓' %>
+                            <%= f.text_field :firstname, placeholder: '名' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='namekana'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='namekana2'>
+                            <%= f.label :フリガナ %>
+                        </div>
+                        <div class='namekana3'>
+                            <%= f.text_field :lastnamekana, placeholder: 'セイ' %>
+                            <%= f.text_field :firstnamekana, placeholder: 'メイ' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+                    
+                    <div class='email'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='email2'>
+                            <%= f.label :Eメール %>
+                        </div>
+                        <div class='email3'>
+                            <%= f.text_field :email, placeholder: 'メールアドレス' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='emailc'>
+                            <div class='required'>
+                                <span>必須</span>
+                            </div>
+                            <div class='emailc2'>
+                                <%= f.label :Eメール %>
+                                <%= f.label :【確認用】%>
+                            </div>
+                            <div class='emailc3'>
+                                <%= f.text_field :email_confirmation, placeholder: 'メールアドレス【確認用】' %>
+                            </div>                    
+                        </div>
+                    <div class='line'></div>
+    
+                    <div class='content'>
+                        <div class='required'>
+                            <span>必須</span>
+                        </div>
+                        <div class='content2'>
+                            <%= f.label :お問合せ内容 %>
+                        </div>
+                    </div>
+                    <div class='content3'>
+                        <div class='emptybox'></div>
+                        <div class="content4">
+                            <%= f.text_area :content, placeholder: '２５０字以内でご記入ください。' %>
+                        </div>
+                    </div>
+                    <div class='line'></div>
+    
+                    <div class='submit'>
+                        <div class="privacy">
+                            <a href="#">個人情報の取り扱いについて</a>
+                        </div>
+                        <%= f.submit '確認画面へ進む', class: 'submit2' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

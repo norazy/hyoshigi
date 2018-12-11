@@ -1,0 +1,73 @@
+<div class="inquirycf_haikei">
+    <div class="inquirycf_haikei2">
+        <div class="navigation">
+            <img src="/kakunin5.svg" alt="navi">
+        </div>
+        <span class='inquiryletter'>内容確認</span>
+        <h2></h2>
+        <div class="inquiry_cf_form">
+            <%= form_for(@inquiry, url: '/inquiry') do |f| %>
+                <div class='name'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='name2'>
+                        <%= f.label :お名前 %>
+                    </div>
+                    <div class='name3'>
+                        <%= @inquiry.lastname %><%= f.hidden_field :lastname %><br>
+                        <%= @inquiry.firstname %><%= f.hidden_field :firstname %><br>
+                    </div>
+                </div>
+                <div class='namekana'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='namekana2'>
+                        <%= f.label :フリガナ %>
+                    </div>
+                    <div class='namekana3'>
+                        <%= @inquiry.lastnamekana %><%= f.hidden_field :lastnamekana %><br>
+                        <%= @inquiry.firstnamekana %><%= f.hidden_field :firstnamekana %><br>
+                    </div>
+                </div>
+                <div class='email'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class='email2'>
+                        <%= f.label :Eメール %>
+                    </div>
+                    <div class='email3'>
+                        <%= @inquiry.email %><br>
+                        <%= f.hidden_field :email %>
+                    </div>
+                </div>
+                <div class='content'>
+                    <div class='required'>
+                        <span>必須</span>
+                    </div>
+                    <div class="content2">
+                        <div class="content3">
+                            <%= f.label :お問合せ内容 %>
+                        </div>
+                        <div class="content4">
+                            <%= @inquiry.content %>
+                            <%= f.hidden_field :content%>
+                        </div>
+                    </div>
+                </div>
+                <div class='line'></div>            
+    
+                <div class='submit'>
+                    <div class="createbutton">
+                        <%= f.submit '入力画面へ戻る', class: 'submit2', name: 'back'%>
+                    </div>
+                    <div class="createbutton2">
+                        <%= f.submit 'これで送信する', class: 'submit3' %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

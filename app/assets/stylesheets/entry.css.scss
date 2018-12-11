@@ -1,0 +1,847 @@
+// Place all the styles related to the entry controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 入会入力フォーム
+.entry_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 70px;
+    z-index: 1;
+
+    .entry_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        padding: 100px 100px 0 100px;
+    }
+
+    // タイトルの文字部分
+    .entry_title {
+        font-size: 20px;
+    }
+
+    //タイトルの下の二色のアンダーラインの部分 
+    h2 {
+        border-bottom: solid 3px #d2d2d2;
+        position: relative;
+        margin: 1rem 0;
+    }
+    h2:after {
+        content: "";
+        display: block;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 20%;
+        border-bottom: 3px solid #942a2a;
+    }
+   
+
+    //エラーメッセージの色 
+    .errorsmessage {
+        color: #49352a;
+    }
+
+    .flow2 img {
+        padding: 13px 0px 33px;
+        margin-left: -8px;
+    }
+    
+    .entry_form {
+        padding-top: 20px;
+    }
+    
+    .entry_form2 {
+        padding-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+        h2 {
+            margin-bottom: 3rem;
+        }
+        .entry_subtitle {
+            display: flex;
+            span {
+                display: block;
+                font-size: 20px;
+            }
+            
+            .entry_subtitle2 {
+                background-color: #fdb2b7;
+                color: #ffffff;
+                width: 5%;
+                text-align: center;
+                height: 30px;
+            }
+            
+            .entry_subtitle3 {
+                padding-left: 2rem;
+                
+                span {
+                    font-size: 1.5rem;
+                    color: #49352a;
+                }
+            }
+        }
+        
+        // 必須のマーク部分
+        .required {
+            width: 20%;
+            span {
+                background: #942a2a;
+                color: #ffffff;
+                padding: 2px 10px;
+                display: block;
+                font-size: 12px;
+                margin: 10px auto;
+                width: 40%;
+                text-align: center;
+            }
+        }
+        
+        .labeltitle{
+            width: 17%;
+            label {
+                font-size: 16px;
+                color: #49352a;
+                margin: 10px auto;
+                display: block;
+            }
+        }
+        .labeltitle2{
+            padding: 10px 0;
+            width: 79%;
+            label {
+                font-size: 16px;
+                color: #49352a;
+                margin: 0 auto;
+                display: block;
+            }
+
+            
+        }
+        .line {
+            width: 90%;
+            border-bottom: 1px solid #d2d2d2;
+            margin: 30px auto;
+                }
+        // 親の名前と子ども名前共通（四箇所）
+        .name {
+            width: 100%;
+            display: flex;
+            
+            .name3 {
+                width: 50%;
+              
+                input {
+                    border: 1px solid #9e9e9e;
+                    border-radius: 3px;
+                    outline: none;
+                    height: 2.5rem;
+                    width: 80%;
+                    font-size: 16px;
+                    margin: 12px 0 8px 0;
+                    padding: 0 0 0 1rem;
+                }
+            }
+        }
+        .parents {
+            padding: 3% 0 5%;
+            .parents_form {
+                padding-left: 2rem;
+                .email {
+                    width: 100%;
+                    display: flex;
+    
+                    .email3 {
+                        width: 50%;
+                      
+                        input {
+                            border: 1px solid #9e9e9e;
+                            border-radius: 3px;
+                            outline: none;
+                            height: 2.5rem;
+                            width: 90%;
+                            font-size: 16px;
+                            margin: 12px 0 8px 0;
+                            padding: 0 0 0 1rem;
+                        }
+                }
+            }
+                .address {
+                    width: 100%;
+                    display: flex;
+                    
+                    .address3 {
+                        width: 50%;
+                      
+                        input {
+                            border: 1px solid #9e9e9e;
+                            border-radius: 3px;
+                            outline: none;
+                            height: 5.5rem;
+                            width: 90%;
+                            font-size: 16px;
+                            margin: 12px 0 8px 0;
+                            padding: 0 0 0 1rem;
+                        }
+                    }                
+                }
+                .phonenumber {
+                    width: 100%;
+                    display: flex;
+                }
+                .phonenumber7 {
+                    width: 100%;
+                    display: flex;
+                    margin: 2% 0;
+                    
+                    .emptybox {
+                        width: 20%;
+                    }
+                    
+                    .phonenumber3 {
+                        width: 14%;
+                        
+                        input {
+                            height: 2.5rem;
+                            border: 1px solid #9e9e9e;
+                            border-radius: 3px;
+                            outline: none;
+                            padding-left: 1rem;
+                        }
+                    }
+                    .line2 {
+                        width: 8%;
+                        margin: 2%;
+                        text-align: center;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+        .child {
+            padding: 3% 0 5%;
+            .child_form{
+                padding-left: 2rem;
+                .birthday {
+                    width: 100%;
+                    display: flex;
+                }
+                .birthday2{
+                    display: flex;
+                    .emptybox2 {
+                        width: 15%;
+                    }
+                    select {
+                        display: block;
+                        // margin: 0 5%;
+                        // background-color: #ffffff;
+                        border: 2px solid #fdb2b7;
+                        border-radius: 5px;
+                        padding: 0 2%;
+                        height: 3.5rem;
+                        font-size: 1.2rem;
+                        color: #49352a;
+                    }
+                    
+                    #entry_birthday_1i {
+                        width: 25%;
+                        margin: 2% 4%;
+                    }
+                    #entry_birthday_2i {
+                        width: 15%;
+                        margin: 2% 3%;
+                    }
+                    #entry_birthday_3i {
+                        width: 15%;
+                        margin: 2% 4%;
+                    }
+    
+
+                }
+                .gender {
+                    width: 100%;
+                    display: flex;
+                }
+                .gender2 {
+                    display: flex;
+                    padding: 18px 0 0;
+                    
+                    .emptybox3 {
+                        width: 20%;
+                    }
+                    
+                    .gender3, .gender4 {
+                        height: 3.5rem;
+                        width: 12rem;
+                        padding: 2% 4%;
+
+                        input{
+                          display: none;
+                        }
+                        
+                        label {
+                            font-size: 1.2rem;
+                            color: #49352a;
+                        }
+                        
+                        input + label{
+                          position:relative;
+                          padding-left: 2rem;
+                        }
+                        input + label::before{
+                          content: "";
+                          display: block;
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 1.2rem;
+                          height: 1.2rem;
+                          border: 2px solid #fdb2b7;
+                          border-radius: 50%;
+                        }
+        
+                        input:checked + label::after{
+                          content: "";
+                          display: block;
+                          position: absolute;
+                          top: 3px;
+                          left: 3px;
+                          width: 0.8rem;
+                          height: 0.8rem;
+                          background: #fdb2b7;
+                          border-radius: 50%;
+                        }                        
+                    }
+                }
+                .course {
+                    width: 100%;
+                    display: flex;
+                }
+                .course2 {
+                    display: flex;
+                    padding: 3% 0;
+                    .emptybox4{
+                        width: 20%;
+                    }
+                    .course3 {
+                        width: 80%;
+                        // margin-top: 16px;
+                        select {
+                            background-color: #ffffff;
+                            border: 2px solid #fdb2b7;
+                            border-radius: 5px;
+                            width: 80%;
+                            padding: 0 2%;
+                            height: 3.5rem;
+                            display: block;
+                            font-size: 1.2rem;
+                            color: #49352a;
+                            
+                            option {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+                .entry_month {
+                    width: 100%;
+                    display: flex;
+                }
+                .entry_month2 {
+                    display: flex;
+                    padding: 3% 0;
+                    .emptybox5 {
+                        width: 20%;
+                    }
+                    .entry_month3 {
+                        width: 80%;
+                        // margin-top: 16px;
+                        select {
+                            background-color: #ffffff;
+                            border: 2px solid #fdb2b7;
+                            border-radius: 5px;
+                            width: 80%;
+                            padding: 0 2%;
+                            height: 3.5rem;
+                            display: block;
+                            font-size: 1.2rem;
+                            color: #49352a;
+                            
+                            option {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .firstmeeting {
+            padding: 4% 0;
+            .firstmeeting2{
+                padding-left: 2rem;
+                .firstmeeting3 {
+                    display: flex;
+                    width: 100%;
+                }
+                .firstmeeting4 {
+                display: flex;
+                width: 100%;
+                    .emptybox6{
+                        width: 20%;
+                    }
+                    .firstmeeting5{
+                        width: 80%;
+                        margin: 18px 0 20px;
+                        select {
+                            background-color: #ffffff;
+                            border: 2px solid #fdb2b7;
+                            border-radius: 5px;
+                            width: 80%;
+                            padding: 0 2%;
+                            height: 3.5rem;
+                            display: block;
+                            font-size: 1.2rem;
+                            color: #49352a;
+                        }
+                    }
+                }
+            }
+        }
+        .submit {
+            padding: 6% 0 0;
+            
+            .privacy {
+                font-size: 13px;
+                width: 35%;                    
+                margin: 0 auto;
+                text-decoration: underline;
+                text-align: center;
+                
+                a {
+                    color: #000000;
+                }
+            }
+    
+            .submit2 {
+                padding: 10px;
+                display: block;
+                margin: 2.5% auto;
+                font-size: 22px;
+                color: #ffffff;
+                width: 40%;
+                background-color: #942a2a;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                height: 50px;
+            }
+            
+            .submit2:hover {
+                background-color: #7a1010;
+            }
+        }
+        .notyet {
+            width: 100%;
+            text-align: center;
+            // padding: 2%;
+
+            span {
+                width: 40%;
+                display: block;
+                color: #49352a;
+                font-size: 13px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//入会確認画面
+.entrycf_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+    
+    .entrycf_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0 100px 0 100px;
+        
+        .entrycfnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        
+        .entrycfletter {
+            font-size: 21px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+
+        .entry_subtitle {
+            display: flex;
+            span {
+                display: block;
+                font-size: 20px;
+            }
+            
+            .entry_subtitle2 {
+                background-color: #fdb2b7;
+                color: #ffffff;
+                width: 5%;
+                text-align: center;
+                height: 30px;
+            }
+            
+            .entry_subtitle3 {
+                padding-left: 2rem;
+                
+                span {
+                    font-size: 1.5rem;
+                    color: #49352a;
+                }
+            }
+        }
+
+        .entrycf {
+            // 必須のマーク部分
+            .required {
+                width: 20%;
+                span {
+                    background: #942a2a;
+                    color: #ffffff;
+                    padding: 2px 10px;
+                    display: block;
+                    font-size: 13px;
+                    margin: 10px auto;
+                    width: 40%;
+                    text-align: center;
+                }
+            }
+            // ラベル部分
+            .entrycflabel {
+                width: 15%;
+                label {
+                    font-size: 18px;
+                    color: #49352a;
+                    margin: 10px auto;
+                    display: block;
+                }
+            }
+            .name {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .name3 {
+                    width: 60%;
+                    font-size: 20px;
+                    // line-height: 3.3rem;
+                }
+            }           
+            .parents_cf {
+                padding-top: 2rem;
+                .parents_cf2 {
+                    padding-left: 2rem;
+                }
+                .email {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .email3 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+                .address {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;            
+                    .address3 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }                
+                }
+                .phonenumber {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;              
+                    .phonenumber3 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                        text-align: center;
+                    
+                        display: flex;
+                        .phonenumbertext {
+                            width: 25%;
+                        }
+                        .line3 {
+                            width: 20%;
+                        }
+                        
+                    }                
+                }
+            }
+            .child_cf{
+                padding-top: 2rem;
+                .child_cf2{
+                    padding-left: 2rem;
+                }
+                .birthday {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .birthday2 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+                .gender {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .gender2 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+                .course {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .course2 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+                .entry_month {
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .entry_month2 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+            }
+            .firstmeeting {
+                padding-top: 2rem;
+                .firstmeeting2 {
+                    padding-left: 2rem;
+                    width: 100%;
+                    display: flex;
+                    margin: 4% 0;
+                    .firstmeeting3 {
+                        width: 50%;
+                        font-size: 20px;
+                        line-height: 3rem;
+                    }
+                }
+            }
+            .line {
+                width: 80%;
+                border-bottom: 1px solid #d2d2d2;
+                margin: 6% auto 4%;
+            }
+            .areyousure{
+                span {
+                    display: block;
+                    margin: 3% 0 5% 10%;
+                    font-size: 19px;
+                }
+            }
+            .submit {
+                display: flex;
+
+                .createbutton {
+                    width: 50%;
+                    .submit2 {
+                        padding: 10px;
+                        display: block;
+                        font-size: 22px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #49352a;
+                        border-radius: 40px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 50px;
+                        margin: 0 auto;
+                    }
+                    .submit2:hover {
+                        background-color: #2f1b10;
+                    }
+                }
+                
+                .createbutton2 {
+                    width: 50%;
+                    .submit3 {
+                        padding: 10px;
+                        display: block;
+                        font-size: 22px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #942a2a;
+                        border-radius: 40px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 50px;
+                        margin: 0 auto;
+                    }
+                    .submit3:hover {
+                        background-color: #7a1010;
+                    }
+                    .notyet {
+                        width: 100%;
+                        span {
+                            display: block;
+                            width: 50%;
+                            font-size: 14px;
+                            margin: 7% auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//入会完了画面
+.entryfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 130px;
+    z-index: 1;
+
+    .entryfin_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0 100px 0 100px;
+        
+        .etnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        .etletter {
+            font-size: 21px;
+        }
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        .contactnumber {
+            width: 100%;
+            padding: 6%;
+            .contactnumber2 {
+                width: 65%;
+                border: 3px solid #c97e83;
+                border-radius: 14px;
+                height: 170px;
+                margin: 0 auto;
+                .contactnumberLetter {
+                    width: 60%;
+                    margin: 0 auto;
+                    text-align: center;
+                    span.contactnumberLetter2 {
+                        padding: 10% 0 6%;
+                        display: block;
+                        font-size: 19px;
+                    }
+                    .line {
+                        width: 88%;
+                        border-bottom: 3px solid #942a2a;
+                        margin: 0 auto;
+                    }
+                    span.contactnumberLetter3 {
+                        padding: 12% 0;
+                        display: block;
+                        font-size: 26px;
+                    }
+
+                }
+            }
+        }
+        .etfinletter {
+            width: 100%;
+            .etfinletter2 {
+                width: 75%;
+                margin: 0 auto;
+                span.etfinletter3 {
+                    font-size: 19px;
+                    display: block;
+                }
+                span.etfinletter4 {
+                    padding-top: 4%;
+                    font-size: 15px;
+                    display: block;
+                }
+            }
+        }
+        .returnbutton {
+            width: 100%;
+            .returnbutton3 {
+                width: 55%;
+                margin: 6% auto;
+                .returnbutton2 {
+                    width: 55%;
+                    height: 50px;
+                    border-radius: 14px;
+                    background-color: #942a2a;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    position: relative;
+                    margin: 0 auto;
+                    a {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .botan_moji {
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 20px;
+                        padding: 10px 0;
+                    }
+                }    
+                .returnbutton2:hover {
+                    background-color: #7a1010;
+                }
+            }
+        }    
+    }
+}
