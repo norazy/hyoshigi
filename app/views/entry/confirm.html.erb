@@ -137,7 +137,8 @@
                                 <%= f.label :生年月日 %>
                             </div>
                             <div class='birthday2'>
-                                <%= @entry.birthday.strftime("%-Y年%-m月%-d日") %><%= f.hidden_field :birthday %><br>
+                                <%#= @entry.birthday.strftime("%-Y年%-m月%-d日") %><%#= f.hidden_field :birthday %>
+                                <%= @entry.birthday.strftime("%-Y年 %-m月") %><%= f.hidden_field :birthday %><br>
                             </div>
                         </div>
                         <div class='gender'>
@@ -170,7 +171,8 @@
                                 <%= f.label :開始月 %>
                             </div>
                             <div class='entry_month2'>
-                                <%= @entry_month %><%= f.hidden_field :joindate %>
+                                <%= @entry_month %><%= f.hidden_field :joindate %><br>
+                                <%#= @entry.joindate.strftime("%-Y年 %-m月") %><%#= f.hidden_field :joindate %>
                             </div>
                         </div>                        
                     </div>
@@ -195,6 +197,7 @@
                         </div>
                         <div class='firstmeeting3'>
                             <%= @entry.date.strftime("%-m月%-d日 #{%w(日 月 火 水 木 金 土)[@entry.date.wday]}曜日 %H:%M  ") %><%= f.hidden_field :date %><br>
+                             <%#= @entry.date %>  
                         </div>
                     </div>
                 </div>

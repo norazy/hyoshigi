@@ -1,4 +1,7 @@
 ja:
+    sublogo: "こども中国語教室"
+    logo: "拍子木塾"
+    yomi: "ひょうしぎじゅく"
     models:
         infomation: 請求情報
     attributes:

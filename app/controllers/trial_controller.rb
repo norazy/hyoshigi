@@ -4,7 +4,7 @@ class TrialController < ApplicationController
         @trial = Trial.new
         
         # 希望日のセレクトの中に表示させる席の残りの配列
-        @trialdate = Trialdate.all
+        @trialdate = Trialdate.after_today
         @trialdate = @trialdate.select{ |trialdate2|
             (trialdate2.capacity - (Trial.where(date: trialdate2.trialdate)).count ) > 0
         }
@@ -19,7 +19,7 @@ class TrialController < ApplicationController
     end
     
     def confirm
-        @trialdate = Trialdate.all
+        @trialdate = Trialdate.after_today
         @trialdate = @trialdate.select{ |trialdate2|
             (trialdate2.capacity - (Trial.where(date: trialdate2.trialdate)).count ) > 0
         }
@@ -39,7 +39,7 @@ class TrialController < ApplicationController
         @trial = Trial.new(trial_params)
 
         # 確認で間違いがあった時に戻るために必要な情報↓
-        @trialdate = Trialdate.all
+        @trialdate = Trialdate.after_today
         @trialdate = @trialdate.select{ |trialdate2|
             (trialdate2.capacity - (Trial.where(date: trialdate2.trialdate)).count ) > 0
         }

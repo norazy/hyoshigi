@@ -4,7 +4,9 @@ class EntryController < ApplicationController
         @entry = Entry.new
         
         # 希望日のセレクトの中に表示させる席の残りを示す配列
-        @entrydate = Entrydate.all
+        # 本当はallだけど、今日の日付より前のものを呼び出されないように
+        # モデルで設定しているafter_todayメソッドを使っている
+        @entrydate = Entrydate.after_today
         # 残り座席がゼロの物をはじくためにselectを使っている
         @entrydate = @entrydate.select{|entrydate|
             (entrydate.capacity - (Entry.where(date: entrydate.entrydate)).count ) > 0    
@@ -16,7 +18,8 @@ class EntryController < ApplicationController
     end
     
     def confirm
-        @entrydate = Entrydate.all
+        # binding.pry
+        @entrydate = Entrydate.after_today
         @entrydate = @entrydate.select{|entrydate|
             (entrydate.capacity - (Entry.where(date: entrydate.entrydate)).count ) > 0    
         }
@@ -35,24 +38,31 @@ class EntryController < ApplicationController
         end
         
         if @entry.course==1
-            @course="週１　グループ　１万/月"
+            @course="週1　グループ　1万/月"
         elsif @entry.course==2
-            @course="週２　グループ　２万/月"
+            @course="週2　グループ　2万/月"
         elsif @entry.course==3
-            @course="週２　個別　３万/月"
+            @course="週1　個別　3万/月"
         else
-            @course="週２　個別　６万/月"
+            @course="週2　個別　6万/月"
         end
         
-        if @entry.joindate==2019-01-01
-            @entry_month="２０１９年　１月"
-        elsif @entry.joindate==2019-02-01
-            @entry_month="２０１９年　２月"
-        elsif @entry.joindate==2019-03-01
-            @entry_month="２０１９年　３月"
+        
+        # パラムズに入っているデータの型と変数の中のバリューの型が違うから
+        # 型を変えてあげる必要がある。
+        # でも、この変化はビューのためのもので、hiddenフィールドに渡しているものとは関係ない
+        datetime = entry_params[:joindate].to_date
+        
+        if datetime==Date.new(2019,2,1)
+            @entry_month="2019年　2月"
+        elsif datetime==Date.new(2019,5,1)
+            @entry_month="2019年　5月"
+        elsif datetime==Date.new(2019,8,1)
+            @entry_month="2019年　8月"
         else
-            @entry_month="２０１９年　４月"
+            @entry_month="2019年　11月"
         end
+        # binding.pry
     end
     
     def create
@@ -60,7 +70,7 @@ class EntryController < ApplicationController
         @entry = Entry.new(entry_params)
 
         # 確認で間違いがあった時に戻るために必要な情報↓
-        @entrydate = Entrydate.all
+        @entrydate = Entrydate.after_today
         @entrydate = @entrydate.select{|entrydate|
             (entrydate.capacity - (Entry.where(date: entrydate.entrydate)).count ) > 0    
         }

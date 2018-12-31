@@ -13,9 +13,13 @@ class InquiryController < ApplicationController
     
     def create
         @inquiry = Inquiry.new(inquiry_params)
+        @inquiry.email_confirmation = params[:inquiry][:email_confirmation]
+
+        # binding.pry
         if params[:back]
             render :new
         else
+            
             @inquiry.save
         end
     end

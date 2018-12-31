@@ -25,7 +25,7 @@
             </div>
             
             <div class="entry_form2">
-                <%= form_for(@entry, url: 'entry/confirm') do |f| %>
+                <%= form_for(@entry, url: '/entry/confirm') do |f| %>
                     <!--保護者情報-->
                     <div class="parents">
                         <div class="entry_subtitle">
@@ -68,7 +68,7 @@
                                 <div class='required'>
                                     <span>必須</span>
                                 </div>
-                                <div class='labeltitle'>
+                                <div class='labeltitle email2'>
                                     <%= f.label :Eメール %>
                                 </div>
                                 <div class='email3'>
@@ -80,11 +80,11 @@
                                 <div class='required'>
                                     <span>必須</span>
                                 </div>
-                                <div class='labeltitle'>
+                                <div class='labeltitle address2'>
                                     <%= f.label :住所 %>
                                 </div>
                                 <div class='address3'>
-                                    <%= f.text_field :address, placeholder: '住所' %>
+                                    <%= f.text_area :address, placeholder: '住所' %>
                                 </div>
                             </div>
                             <div class='line'></div>
@@ -158,15 +158,18 @@
                                     <span>必須</span>
                                 </div>
                                 <div class='labeltitle2'>
-                                    <%= f.label :生年月日%>
+                                    <%= f.label :生年月%>
                                 </div>
                             </div>
                             <div class='birthday2'>
                                 <div class='emptybox2'></div>
-                                <%= f.date_select :birthday,
+                                <!--f.date_select :birthday,-->
+                                <!--# :onChange=>"dateValidation(this, 'entry[birthday(1i)]', 'entry[birthday(2i)]', 'entry[birthday(3i)]')",-->
+                                <%= f.date_select :birthday, :discard_day => true,
                                       start_year: (Time.now.year - 3),
                                       end_year:   (Time.now.year - 10),
-                                      prompt: { year: '', month: '', day: ''} %>
+                                      prompt: { year: '', month: '', day: ''}
+                                %>
                             </div>                                
                             <div class='line'></div>
                             <div class='gender'>
@@ -200,7 +203,7 @@
                             <div class='course2'>
                                 <div class='emptybox4'></div>
                                 <div class='course3'>
-                                    <%= f.select :course, [["週１　グループ　１万/月", "1"], ["週２　グループ　２万/月", "2"], ["週１　個別　３万/月", "3"], ["週２　個別　６万/月", "6"]] %>
+                                    <%= f.select :course, [["週1　グループ　1万/月", "1"], ["週2　グループ　2万/月", "2"], ["週1　個別　3万/月", "3"], ["週2　個別　6万/月", "6"]] %>
                                 </div>
                             </div>
                             <div class='line'></div>
@@ -215,7 +218,7 @@
                             <div class='entry_month2'>
                                 <div class='emptybox5'></div>
                                 <div class='entry_month3'>
-                                    <%= f.select :joindate,  [["２０１９年　２月", "2019-02-01"], ["２０１９年　５月", "2019-05-01"], ["２０１９年　８月", "2019-08-01"], ["２０１９年　１１月", "2019-11-01"]] %>
+                                    <%= f.select :joindate,  [["2019年　2月", "2019-02-01"], ["2019年　5月", "2019-05-01"], ["2019年　8月", "2019-8-01"], ["2019年　11月", "2019-11-01"]] %>
                                 </div>
                             </div>
                         </div>
@@ -262,3 +265,47 @@
         </div>
     </div>
 </div>
+
+<script>
+
+// function dateValidation( element, year, month, day ) {
+//     var y = document.getElementsByName( year )[0].value;
+//     var m = document.getElementsByName( month )[0].value;
+//     var d = document.getElementsByName( day )[0].value;
+ 
+//  if ( y && m && d ) {
+//         var ds = new Date( y, m-1, d );
+//      if ( ds.getFullYear() != y || ds.getMonth() != m-1 || ds.getDate() != d ) {
+//          return element.value = '';
+//         }
+//   }
+// }
+// document.getElementById('new_entry').select.onchange = function(y, m, d){
+// function isValidDate(y,m-1,d){
+//     var di = new Date(y,m-1,d);
+//     if(di.getFullYear() == y && di.getMonth() == m-1 && di.getDate() == d){
+//     // return true;
+//     console.log('true')
+//     }
+//     // return false;    
+//     console.log('false')
+// }
+
+
+// var isValidDate = function (y, m, d){
+//     var di = new Date(y,m-1,d);
+//     if(di.getFullYear() == y && di.getMonth() == m-1 && di.getDate() == d){
+//     return true;
+//     }
+//     return false;    
+// }
+
+
+// function isValidDate(y,m,d){
+//     var di = new Date(y,m-1,d);
+//     if(di.getFullYear() == y && di.getMonth() == m-1 && di.getDate() == d){
+//     return true;
+//     }
+//     return false;
+// }
+</script>
