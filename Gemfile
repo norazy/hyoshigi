@@ -51,3 +51,9 @@ gem 'sprockets', '2.11.0'
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'rails-i18n', '~> 4.0'
+
+group :production do
+  gem 'rails_12factor'
+end
+
+ruby '2.3.1'
