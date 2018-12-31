@@ -2,6 +2,2064 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media (max-width: 499px) {
+// 体験会入力フォーム
+.trial_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 30px 0 45px;
+    z-index: 1;
+
+    .trial_haikei2 {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    // タイトルの文字部分（二箇所）
+    .trial_title {
+        font-size: 17px;
+    }
+
+    //タイトルの下の二色のアンダーラインの部分（二箇所） 
+    h2 {
+        border-bottom: solid 3px #d2d2d2;
+        position: relative;
+        margin: 3% 0;
+    }
+    h2:after {
+        content: "";
+        display: block;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        // bottom: -2px;
+        width: 20%;
+        border-bottom: 3px solid #942a2a;
+    }
+
+    // 必須のマーク部分（八箇所）
+    .required {
+        width: 22%;
+        span {
+            background: #942a2a;
+            color: #ffffff;
+            padding: 2px 10px;
+            display: block;
+            font-size: 12px;
+            margin: 10px auto;
+            width: 72%;
+            text-align: center;
+        }
+    }    
+
+    //エラーメッセージの色 
+    .errorsmessage {
+        color: #49352a;
+    }
+
+    .flow2 img {
+        padding: 13px 0px 33px;
+        margin-left: -5px;
+    }
+
+    .appform2 {
+        width: 90%;
+        margin: 0 auto;
+
+        .subtitle {
+            padding: 2% 0;
+            display: flex;
+            span {
+                display: block;
+                font-size: 16px;
+            }
+            
+            .subtitle2 {
+                background-color: #fdb2b7;
+                color: #ffffff;
+                width: 8%;
+                height: 5%;
+                text-align: center;
+                // height: 30px;
+            }
+            
+            .subtitle3 {
+                padding-left: 2rem;
+                
+                span {
+                    font-size: 17px;
+                    color: #49352a;
+                }
+            }
+        }
+        .age {
+            padding: 2% 0;
+            .age3 {
+                display: flex;
+                padding: 10px 0 20px;
+            
+                .age32, .age33 {
+                    height: 3rem;
+                    width: 9rem;
+                    padding: 2.5%;
+                    // padding: 2% 4%;
+                    border: solid 2px #fdb2b7;
+                    // margin-left: 70px;
+                    border-radius: 3px;
+        
+                    input{
+                      display: none;
+                    }
+                    
+                    label {
+                        font-size: 15px;
+                        color: #49352a;
+                        padding-top: 1px;
+                    }
+                    
+                    input + label{
+                      position:relative;
+                      padding-left: 24px;
+                    }
+                    input + label::before{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 1.2rem;
+                      height: 1.2rem;
+                      border: 2px solid #fdb2b7;
+                    }
+    
+                    input:checked + label::after{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 3px;
+                      left: 3px;
+                      width: 0.8rem;
+                      height: 0.8rem;
+                      background: #fdb2b7;
+                      border-radius: 10%;
+                    }
+                }  
+                .age33 {
+                    margin-left: 10px;
+
+                }
+            }
+        }
+        .date {
+            padding: 2% 0 7%;
+            .dateselect2{
+                display: flex;
+                .required {
+                    margin: 18px auto;
+                }
+                .dateselect{
+                    width: 80%;
+                    margin: 12px 0 18px;
+                    select {
+                        background-color: #ffffff;
+                        border: 2px solid #fdb2b7;
+                        border-radius: 5px;
+                        width: 100%;
+                        padding: 0 2%;
+                        height: 3.5rem;
+                        display: block;
+                        // margin-left: 70px;
+                        font-size: 16px;
+                        color: #49352a;
+                        // option {
+                        //     background-color: #ffffff;
+                        // }
+                    }
+                }
+            }
+        }
+        .contactform {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 2%;
+            // .name {
+            //     width: 100%;
+            //     display: flex;
+            //     padding: 3% 0 3%;
+            //     .name2 {
+            //         width: 20%;
+            //         label {
+            //             font-size: 16px;
+            //             color: #49352a;
+            //             margin: 10px auto;
+            //             display: block;
+            //         }
+            //     }
+            //     .name3 {
+            //         width: 60%;
+            //         display: flex;
+            //         input {
+            //             border: 1px solid #9e9e9e;
+            //             border-radius: 3px;
+            //             outline: none;
+            //             height: 2.5rem;
+            //             // width: 69%;
+            //             font-size: 16px;
+            //             // margin: 10px 35px 8px 0;
+            //             padding: 0 0 0 1rem;
+            //             margin: 10px 10px 0 0px;
+            //         }
+            //     }
+            // }
+            .name {
+                    width: 100%;
+                    display: flex;
+                    
+                    .name2 {
+                        width: 20%;
+                        
+                        label {
+                            font-size: 15px;
+                            color: #000000;
+                            margin: 11px auto;
+                            display: block;
+                        }
+                    }
+                    
+                    .name3 {
+                        width: 60%;
+                      
+                        input {
+                            border: 1px solid #9e9e9e;
+                            border-radius: 3px;
+                            outline: none;
+                            height: 2.5rem;
+                            width: 80%;
+                            font-size: 15px;
+                            margin: 12px 0 8px 10px;
+                            padding: 0 0 0 1rem;
+                        }
+                    }
+                }
+
+            .email {
+                    .required {
+                        float: left;
+                    }
+                    .email2 {
+                        width: 70%;
+                        float: left;
+                        label {
+                            font-size: 16px;
+                            color: #49352a;
+                            margin: 10px auto;
+                            display: block;
+                        }
+                    }
+                    
+                // }
+                .email3 {
+                    width: 100%;
+                    margin-left: 20%;
+                    input {
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 72%;
+                        font-size: 16px;
+                        margin: 9px 0 8px 0;
+                        padding: 0 0 0 1rem;
+                    }
+                }
+            }
+            .email:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 2%;
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 79%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+            .phonenumber7 {
+                width: 95%;
+                display: flex;
+                padding: 1% 0 3%;
+                // .emptybox {
+                //     width: 20%;
+                // }
+                .phonenumber3 {
+                    width: 16%;
+                    margin: 0 auto;
+
+                    input {
+                        height: 2.5rem;
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        padding-left: 1rem;
+                    }
+                }
+                .line2 {
+                    width: 8%;
+                    margin: 2%;
+                    text-align: center;
+                    padding-left: 1rem;
+                }
+            }
+            .submit {
+                padding: 3% 0;
+                .privacy {
+                    font-size: 11px;
+                    width: 55%;                    
+                    margin: 0 auto;
+                    text-decoration: underline;
+                    text-align: center;
+                    a {
+                        color: #000000;
+                    }
+                }
+                .submit2 {
+                    padding: 10px;
+                    display: block;
+                    margin: 2.5% auto;
+                    font-size: 16px;
+                    color: #ffffff;
+                    width: 50%;
+                    background-color: #942a2a;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    height: 45px;
+                }
+                .submit2:hover {
+                    background-color: #7a1010;
+                }
+            }
+        }
+    }
+}    
+
+//体験会入力確認画面
+.trialcf_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding-bottom: 45px;
+    z-index: 1;
+    
+    .trialcf_haikei2 {
+        width: 350px;
+        margin: 0 auto;
+
+        .trcfnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -6px;
+        }
+        
+        .trcfletter {
+            font-size: 18px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .trconfirmform {
+            padding: 5px 10px;
+        
+            // 必須のマーク部分
+            .required {
+                width: 20%;
+                span {
+                    background: #942a2a;
+                    color: #ffffff;
+                    padding: 2px 10px;
+                    display: block;
+                    font-size: 10px;
+                    margin: 10px auto;
+                    width: 61%;
+                    text-align: center;
+                }
+            }
+
+            .age {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .age2 {
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .age3 {
+                    width: 55%;
+                    font-size: 16px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .date {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .date2 {
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .date3 {
+                    width: 55%;
+                    font-size: 16px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .name {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .name2 {
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .name3 {
+                    width: 55%;
+                    font-size: 16px;
+                    line-height: 3.3rem;
+                }
+            }
+            .namekana {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .namekana2 {
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .namekana3 {
+                    width: 55%;
+                    font-size: 16px;
+                    line-height: 3.3rem;
+                }
+            }
+            .email {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .email2 {
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .email3 {
+                    width: 58%;
+                    font-size: 14px;
+                    line-height: 3rem;
+                }
+            }
+            .address {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;            
+                .address2 {
+                    padding: 10px 0;
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .address3 {
+                    width: 50%;
+                    font-size: 15px;
+                    line-height: 2rem;
+                }                
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                margin: 4% 0 12%;              
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 22%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .phonenumber3 {
+                    width: 50%;
+                    font-size: 16px;
+                    line-height: 3rem;
+                    text-align: center;
+                
+                    display: flex;
+                    .phonenumbertext {
+                        width: 25%;
+                    }
+                    .line3 {
+                        width: 20%;
+                    }
+                    
+                }                
+            }
+            .line {
+                width: 90%;
+                border-bottom: 1px solid #d2d2d2;
+                margin: 6% auto;
+            }
+            
+            .submit {
+                display: flex;
+
+                .createbutton {
+                    width: 50%;
+                    .submit2 {
+                        padding: 10px;
+                        display: block;
+                        font-size: 15px;
+                        color: #ffffff;
+                        width: 82%;
+                        background-color: #49352a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 43px;
+                        margin: 0 auto;
+                    }
+                    .submit2:hover {
+                        background-color: #2f1b10;
+                    }
+                }
+                
+                .createbutton2 {
+                    width: 50%;
+                    .submit3 {
+                        padding: 10px;
+                        display: block;
+                        // margin: 1.5% auto;
+                        font-size: 15px;
+                        color: #ffffff;
+                        width: 82%;
+                        background-color: #942a2a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 43px;
+                        margin: 0 auto;
+                    }
+                    .submit3:hover {
+                        background-color: #7a1010;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//体験会完了画面
+.trialfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding-bottom: 45px;
+    z-index: 1;
+
+    .trialfin_haikei2 {
+        width: 350px;
+        margin: 0 auto;
+        
+        .trnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -6px;
+        }
+        .trletter {
+            font-size: 18px;
+        }
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        .trfinletter {
+            width: 100%;
+            .trfinletter2 {
+                width: 82%;
+                margin: 8% auto 0;
+                span {
+                    font-size: 16px;
+                    display: block;
+                    width: 100%;
+                    // margin: 5% auto;
+                }
+            }
+        }
+        .returnbutton {
+            width: 100%;
+            display: flex;
+            .returnbutton3 {
+                width: 60%;
+                // padding-left: 2%;
+                .returnbutton2 {
+                    width: 67%;
+                    height: 41px;
+                    border-radius: 14px;
+                    background-color: #942a2a;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    position: relative;
+                    margin: 10% auto 0;
+                    a {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .botan_moji {
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 16px;
+                        padding: 8px 0;
+                    }
+                }    
+                .returnbutton2:hover {
+                    background-color: #7a1010;
+                }
+            }
+            .trfingif{
+                width: 30%;
+                margin-top: -3%;
+                img {
+                    height: 92px;
+                }
+            }
+        }    
+        .trfinletter7 {
+            font-size: 12px;
+            span {
+                display: block;
+                width: 84%;
+                margin: 4% 0;
+                padding-left: 13%;
+            }
+        }
+    }
+}
+
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+// 体験会入力フォーム
+.trial_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 150px 0 55px;
+    z-index: 1;
+
+    .trial_haikei2 {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    // タイトルの文字部分（二箇所）
+    .trial_title {
+        font-size: 18px;
+    }
+
+    //タイトルの下の二色のアンダーラインの部分（二箇所） 
+    h2 {
+        border-bottom: solid 3px #d2d2d2;
+        position: relative;
+        margin: 1rem 0;
+    }
+    h2:after {
+        content: "";
+        display: block;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        // bottom: -2px;
+        width: 20%;
+        border-bottom: 3px solid #942a2a;
+    }
+
+    // 必須のマーク部分（八箇所）
+    .required {
+        width: 22%;
+        span {
+            background: #942a2a;
+            color: #ffffff;
+            padding: 2px 10px;
+            display: block;
+            font-size: 12px;
+            margin: 10px auto;
+            width: 56%;
+            text-align: center;
+        }
+    }    
+
+    //エラーメッセージの色 
+    .errorsmessage {
+        color: #49352a;
+    }
+
+    .flow2 img {
+        padding: 13px 0px 33px;
+        margin-left: -8px;
+    }
+
+    .appform2 {
+        // padding-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+
+        .subtitle {
+            padding: 2% 0;
+            display: flex;
+            span {
+                display: block;
+                font-size: 18px;
+            }
+            
+            .subtitle2 {
+                background-color: #fdb2b7;
+                color: #ffffff;
+                width: 8%;
+                height: 5%;
+                text-align: center;
+                // height: 30px;
+            }
+            
+            .subtitle3 {
+                padding-left: 2rem;
+                
+                span {
+                    font-size: 19px;
+                    color: #49352a;
+                }
+            }
+        }
+        .age {
+            padding: 2% 0;
+            .age3 {
+                display: flex;
+                padding: 18px 0 22px;
+            
+                .age32, .age33 {
+                    height: 3.5rem;
+                    width: 11rem;
+                    padding: 2.5% 4%;
+                    border: solid 2px #fdb2b7;
+                    // margin-left: 70px;
+                    border-radius: 3px;
+        
+                    input{
+                      display: none;
+                    }
+                    
+                    label {
+                        font-size: 17px;
+                        color: #49352a;
+                    }
+                    
+                    input + label{
+                      position:relative;
+                      padding-left: 2rem;
+                    }
+                    input + label::before{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 1.1rem;
+                      height: 1.1rem;
+                      border: 2px solid #fdb2b7;
+                    }
+    
+                    input:checked + label::after{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 3px;
+                      left: 3px;
+                      width: 0.7rem;
+                      height: 0.7rem;
+                      background: #fdb2b7;
+                      border-radius: 25%;
+                    }
+                }  
+                .age33 {
+                    margin-left: 20px;
+
+                }
+            }
+        }
+        .date {
+            padding: 2% 0 7%;
+            .dateselect2{
+                display: flex;
+                .required {
+                    margin: 18px auto;
+                }
+                .dateselect{
+                    width: 80%;
+                    margin: 18px 0 20px;
+                    select {
+                        background-color: #ffffff;
+                        border: 2px solid #fdb2b7;
+                        border-radius: 5px;
+                        width: 80%;
+                        padding: 0 2%;
+                        height: 3.5rem;
+                        display: block;
+                        // margin-left: 70px;
+                        font-size: 1.2rem;
+                        color: #49352a;
+                        // option {
+                        //     background-color: #ffffff;
+                        // }
+                    }
+                }
+            }
+        }
+        .contactform {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 2%;
+            .name {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 3%;
+                .name2 {
+                    width: 20%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                    }
+                }
+                .name3 {
+                    width: 60%;
+                    display: flex;
+                    input {
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        height: 2.5rem;
+                        // width: 69%;
+                        font-size: 16px;
+                        // margin: 10px 35px 8px 0;
+                        padding: 0 0 0 1rem;
+                        margin: 10px 10px 0 0px;
+                    }
+                }
+            }
+            .email {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 3%;
+                .email4 {
+                    display: none;
+                }
+                .email2 {
+                    width: 20%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                    }
+                }
+                .email3 {
+                    width: 60%;
+                    input {
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 88%;
+                        font-size: 16px;
+                        margin: 9px 0 8px 0;
+                        padding: 0 0 0 1rem;
+                    }
+                }
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 2%;
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 79%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+            .phonenumber7 {
+                width: 100%;
+                display: flex;
+                padding: 1% 0 3%;
+                .emptybox {
+                    width: 20%;
+                }
+                .phonenumber3 {
+                    width: 14%;
+                    input {
+                        height: 2.5rem;
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        padding-left: 1rem;
+                    }
+                }
+                .line2 {
+                    width: 8%;
+                    margin: 2%;
+                    text-align: center;
+                    padding-left: 1rem;
+                }
+            }
+            .submit {
+                padding: 3% 0;
+                .privacy {
+                    font-size: 13px;
+                    width: 48%;                    
+                    margin: 0 auto;
+                    text-decoration: underline;
+                    text-align: center;
+                    a {
+                        color: #000000;
+                    }
+                }
+                .submit2 {
+                    padding: 10px;
+                    display: block;
+                    margin: 2.5% auto;
+                    font-size: 19px;
+                    color: #ffffff;
+                    width: 46%;
+                    background-color: #942a2a;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    height: 48px;
+                }
+                .submit2:hover {
+                    background-color: #7a1010;
+                }
+            }
+        }
+    }
+}    
+
+//体験会入力確認画面
+.trialcf_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 140px 0 55px;
+    z-index: 1;
+    
+    .trialcf_haikei2 {
+        width: 450px;
+        margin: 0 auto;
+
+        .trcfnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        
+        .trcfletter {
+            font-size: 19px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .trconfirmform {
+            padding: 5px 15px;
+        
+            // 必須のマーク部分
+            .required {
+                width: 20%;
+                span {
+                    background: #942a2a;
+                    color: #ffffff;
+                    padding: 2px 10px;
+                    display: block;
+                    font-size: 12px;
+                    margin: 10px auto;
+                    width: 55%;
+                    text-align: center;
+                }
+            }
+
+            .age {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .age2 {
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .age3 {
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .date {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .date2 {
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .date3 {
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .name {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .name2 {
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .name3 {
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 3.3rem;
+                }
+            }
+            .namekana {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .namekana2 {
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .namekana3 {
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 3.3rem;
+                }
+            }
+            .email {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .email2 {
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .email3 {
+                    width: 50%;
+                    font-size: 18px;
+                    line-height: 3rem;
+                }
+            }
+            .address {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;            
+                .address2 {
+                    padding: 10px 0;
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .address3 {
+                    width: 50%;
+                    font-size: 18px;
+                    line-height: 3rem;
+                }                
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;              
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 18%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .phonenumber3 {
+                    width: 50%;
+                    font-size: 18px;
+                    line-height: 3rem;
+                    text-align: center;
+                
+                    display: flex;
+                    .phonenumbertext {
+                        width: 25%;
+                    }
+                    .line3 {
+                        width: 20%;
+                    }
+                    
+                }                
+            }
+            .line {
+                width: 90%;
+                border-bottom: 1px solid #d2d2d2;
+                margin: 6% auto;
+            }
+            
+            .submit {
+                display: flex;
+
+                .createbutton {
+                    width: 50%;
+                    .submit2 {
+                        padding: 10px;
+                        display: block;
+                        font-size: 17px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #49352a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 45px;
+                        margin: 0 auto;
+                    }
+                    .submit2:hover {
+                        background-color: #2f1b10;
+                    }
+                }
+                
+                .createbutton2 {
+                    width: 50%;
+                    .submit3 {
+                        padding: 10px;
+                        display: block;
+                        // margin: 1.5% auto;
+                        font-size: 17px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #942a2a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 45px;
+                        margin: 0 auto;
+                    }
+                    .submit3:hover {
+                        background-color: #7a1010;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//体験会完了画面
+.trialfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 140px 0 55px;
+    z-index: 1;
+
+    .trialfin_haikei2 {
+        width: 450px;
+        margin: 0 auto;
+        
+        .trnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        .trletter {
+            font-size: 19px;
+        }
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        .trfinletter {
+            width: 100%;
+            .trfinletter2 {
+                width: 86%;
+                margin: 8% auto 0;
+                span {
+                    font-size: 16px;
+                    display: block;
+                    width: 100%;
+                    // margin: 5% auto;
+                }
+            }
+        }
+        .returnbutton {
+            width: 100%;
+            display: flex;
+            .returnbutton3 {
+                width: 60%;
+                padding-left: 2%;
+                .returnbutton2 {
+                    width: 55%;
+                    height: 40px;
+                    border-radius: 10px;
+                    background-color: #942a2a;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    position: relative;
+                    margin: 10% auto 0;
+                    
+                    a {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .botan_moji {
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 16px;
+                        padding: 8px 0;
+                    }
+                }    
+                .returnbutton2:hover {
+                    background-color: #7a1010;
+                }
+            }
+            .trfingif{
+                width: 30%;
+                img {
+                    height: 95px;
+                }
+            }
+        }    
+        .trfinletter7 {
+            font-size: 14px;
+            span {
+                display: block;
+                width: 86%;
+                margin: 4% 0;
+                padding-left: 13%;
+            }
+        }
+    }
+}
+    
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+// 体験会入力フォーム
+.trial_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 70px 0;
+    z-index: 1;
+
+    .trial_haikei2 {
+        width: 660px;
+        margin: 0 auto;
+        padding: 100px 50px 0 50px;
+    }
+
+    // タイトルの文字部分（二箇所）
+    .trial_title {
+        font-size: 19px;
+    }
+
+    //タイトルの下の二色のアンダーラインの部分（二箇所） 
+    h2 {
+        border-bottom: solid 3px #d2d2d2;
+        position: relative;
+        margin: 1rem 0;
+    }
+    h2:after {
+        content: "";
+        display: block;
+        line-height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 20%;
+        border-bottom: 3px solid #942a2a;
+    }
+
+    // 必須のマーク部分（八箇所）
+    .required {
+        width: 22%;
+        span {
+            background: #942a2a;
+            color: #ffffff;
+            padding: 2px 10px;
+            display: block;
+            font-size: 12px;
+            margin: 10px auto;
+            width: 46%;
+            text-align: center;
+        }
+    }    
+
+    //エラーメッセージの色 
+    .errorsmessage {
+        color: #49352a;
+    }
+
+    .flow2 img {
+        padding: 13px 0px 33px;
+        margin-left: -8px;
+    }
+
+    .appform2 {
+        // padding-top: 20px;
+        width: 90%;
+        margin: 0 auto;
+
+        .subtitle {
+            padding: 2% 0;
+            display: flex;
+            span {
+                display: block;
+                font-size: 18px;
+            }
+            
+            .subtitle2 {
+                background-color: #fdb2b7;
+                color: #ffffff;
+                width: 5%;
+                text-align: center;
+                // height: 30px;
+            }
+            
+            .subtitle3 {
+                padding-left: 2rem;
+                
+                span {
+                    font-size: 20px;
+                    color: #49352a;
+                }
+            }
+        }
+        .age {
+            padding: 2% 0 5%;
+            .age3 {
+                display: flex;
+                padding: 18px 0 22px;
+            
+                .age32, .age33 {
+                    height: 3.5rem;
+                    width: 12rem;
+                    padding: 2% 4%;
+                    border: solid 2px #fdb2b7;
+                    // margin-left: 70px;
+                    border-radius: 3px;
+        
+                    input{
+                      display: none;
+                    }
+                    
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                    }
+                    
+                    input + label{
+                      position:relative;
+                      padding-left: 2rem;
+                    }
+                    input + label::before{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 1.2rem;
+                      height: 1.2rem;
+                      border: 2px solid #fdb2b7;
+                    }
+    
+                    input:checked + label::after{
+                      content: "";
+                      display: block;
+                      position: absolute;
+                      top: 3px;
+                      left: 3px;
+                      width: 0.8rem;
+                      height: 0.8rem;
+                      background: #fdb2b7;
+                      border-radius: 25%;
+                    }
+                }  
+                .age33 {
+                    margin-left: 40px;
+
+                }
+            }
+        }
+        .date {
+            padding: 2% 0 7%;
+            .dateselect2{
+                display: flex;
+                .required {
+                    margin: 18px auto;
+                }
+                .dateselect{
+                    width: 80%;
+                    margin: 18px 0 20px;
+                    select {
+                        background-color: #ffffff;
+                        border: 2px solid #fdb2b7;
+                        border-radius: 5px;
+                        width: 80%;
+                        padding: 0 2%;
+                        height: 3.5rem;
+                        display: block;
+                        // margin-left: 70px;
+                        font-size: 1.2rem;
+                        color: #49352a;
+                        // option {
+                        //     background-color: #ffffff;
+                        // }
+                    }
+                }
+            }
+        }
+        .contactform {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 2%;
+            .name {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 3%;
+                .name2 {
+                    width: 20%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                    }
+                }
+                .name3 {
+                    width: 60%;
+                    display: flex;
+                    input {
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 69%;
+                        font-size: 16px;
+                        margin: 10px 35px 8px 0;
+                        padding: 0 0 0 1rem;
+                    }
+                }
+            }
+            .email {
+                width: 100%;
+                display: flex;
+                padding: 3% 0 3%;
+                .email2 {
+                    width: 20%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                    }
+                }
+                .email3 {
+                    width: 60%;
+                    input {
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        height: 2.5rem;
+                        width: 85%;
+                        font-size: 16px;
+                        margin: 12px 0 8px 0;
+                        padding: 0 0 0 1rem;
+                    }
+                }
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                padding: 3% 0;
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 79%;
+                    label {
+                        font-size: 16px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+            .phonenumber7 {
+                width: 100%;
+                display: flex;
+                padding: 1% 0 3%;
+                .emptybox {
+                    width: 20%;
+                }
+                .phonenumber3 {
+                    width: 14%;
+                    input {
+                        height: 2.5rem;
+                        border: 1px solid #9e9e9e;
+                        border-radius: 3px;
+                        outline: none;
+                        padding-left: 1rem;
+                    }
+                }
+                .line2 {
+                    width: 8%;
+                    margin: 2%;
+                    text-align: center;
+                    padding-left: 1rem;
+                }
+            }
+            .submit {
+                padding: 3% 0;
+                .privacy {
+                    font-size: 13px;
+                    width: 40%;                    
+                    margin: 0 auto;
+                    text-decoration: underline;
+                    text-align: center;
+                    a {
+                        color: #000000;
+                    }
+                }
+                .submit2 {
+                    padding: 10px;
+                    display: block;
+                    margin: 2.5% auto;
+                    font-size: 20px;
+                    color: #ffffff;
+                    width: 40%;
+                    background-color: #942a2a;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    height: 50px;
+                }
+                .submit2:hover {
+                    background-color: #7a1010;
+                }
+            }
+        }
+    }
+}
+
+//体験会入力確認画面
+.trialcf_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 70px 0;
+    z-index: 1;
+    
+    .trialcf_haikei2 {
+        width: 660px;
+        margin: 0 auto;
+        padding: 80px 50px 0 50px;
+       
+        .trcfnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        
+        .trcfletter {
+            font-size: 20px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .trconfirmform {
+            padding: 10px 20px;
+        
+            // 必須のマーク部分
+            .required {
+                width: 20%;
+                span {
+                    background: #942a2a;
+                    color: #ffffff;
+                    padding: 2px 10px;
+                    display: block;
+                    font-size: 13px;
+                    margin: 10px auto;
+                    width: 45%;
+                    text-align: center;
+                }
+            }
+
+            .age {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .age2 {
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .age3 {
+                    width: 60%;
+                    font-size: 20px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .date {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .date2 {
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .date3 {
+                    width: 60%;
+                    font-size: 20px;
+                    line-height: 3.3rem;
+                }
+            }
+
+            .name {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .name2 {
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .name3 {
+                    width: 60%;
+                    font-size: 20px;
+                    line-height: 3.3rem;
+                }
+            }
+            .namekana {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .namekana2 {
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .namekana3 {
+                    width: 60%;
+                    font-size: 20px;
+                    line-height: 3.3rem;
+                }
+            }
+            .email {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;
+                .email2 {
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 10px auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .email3 {
+                    width: 50%;
+                    font-size: 20px;
+                    line-height: 3rem;
+                }
+            }
+            .address {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;            
+                .address2 {
+                    padding: 10px 0;
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .address3 {
+                    width: 50%;
+                    font-size: 20px;
+                    line-height: 3rem;
+                }                
+            }
+            .phonenumber {
+                width: 100%;
+                display: flex;
+                margin: 4% 0;              
+                .phonenumber2 {
+                    padding: 10px 0;
+                    width: 18%;
+                    label {
+                        font-size: 18px;
+                        color: #49352a;
+                        margin: 0 auto;
+                        display: block;
+                        padding-left: 10%;
+                    }
+                }
+                .phonenumber3 {
+                    width: 50%;
+                    font-size: 20px;
+                    line-height: 3rem;
+                    text-align: center;
+                
+                    display: flex;
+                    .phonenumbertext {
+                        width: 25%;
+                    }
+                    .line3 {
+                        width: 20%;
+                    }
+                    
+                }                
+            }
+            .line {
+                width: 90%;
+                border-bottom: 1px solid #d2d2d2;
+                margin: 6% auto;
+            }
+            
+            .submit {
+                display: flex;
+
+                .createbutton {
+                    width: 50%;
+                    .submit2 {
+                        padding: 10px;
+                        display: block;
+                        font-size: 20px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #49352a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 46px;
+                        margin: 0 auto;
+                    }
+                    .submit2:hover {
+                        background-color: #2f1b10;
+                    }
+                }
+                
+                .createbutton2 {
+                    width: 50%;
+                    .submit3 {
+                        padding: 10px;
+                        display: block;
+                        // margin: 1.5% auto;
+                        font-size: 20px;
+                        color: #ffffff;
+                        width: 70%;
+                        background-color: #942a2a;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                        height: 46px;
+                        margin: 0 auto;
+                    }
+                    .submit3:hover {
+                        background-color: #7a1010;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//体験会完了画面
+.trialfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 70px 0;
+    z-index: 1;
+
+    .trialfin_haikei2 {
+        width: 660px;
+        margin: 0 auto;
+        padding: 80px 50px 0 50px;
+        
+        .trnavigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+        .trletter {
+            font-size: 20px;
+        }
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        .trfinletter {
+            width: 100%;
+            .trfinletter2 {
+                width: 82%;
+                margin: 8% auto 0;
+                span {
+                    font-size: 19px;
+                    display: block;
+                    width: 100%;
+                    // margin: 5% auto;
+                }
+            }
+        }
+        .returnbutton {
+            width: 100%;
+            display: flex;
+            .returnbutton3 {
+                width: 55%;
+                padding-left: 2%;
+                .returnbutton2 {
+                    width: 55%;
+                    height: 45px;
+                    border-radius: 14px;
+                    background-color: #942a2a;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                    position: relative;
+                    margin: 10% auto 0;
+                    a {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .botan_moji {
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 19px;
+                        padding: 8px 0;
+                    }
+                }    
+                .returnbutton2:hover {
+                    background-color: #7a1010;
+                }
+            }
+            .trfingif{
+                width: 30%;
+                img {
+                    height: 100px;
+                }
+            }
+        }    
+        .trfinletter7 {
+            font-size: 14px;
+            span {
+                display: block;
+                width: 86%;
+                margin: 4% 0;
+                padding-left: 13%;
+            }
+        }
+    }
+}
+
+}    
+
+@media (min-width: 1020px) {
 // 体験会入力フォーム
 .trial_haikei {
     background-color: #ffffff;
@@ -311,7 +2369,7 @@
 .trialcf_haikei {
     background-color: #ffffff;
     margin: 0;
-    padding: 130px;
+    padding: 130px 0;
     z-index: 1;
     
     .trialcf_haikei2 {
@@ -568,7 +2626,7 @@
 .trialfin_haikei {
     background-color: #ffffff;
     margin: 0;
-    padding: 130px;
+    padding: 130px 0;
     z-index: 1;
 
     .trialfin_haikei2 {
@@ -655,10 +2713,11 @@
             font-size: 14px;
             span {
                 display: block;
-                width: 75%;
+                width: 74%;
                 margin: 4% 0;
                 padding-left: 15%;
             }
         }
     }
+}
 }

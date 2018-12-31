@@ -1,6 +1,9 @@
 <div class="how_much_haikei">
     <div class="kobetsupage">
-        <ul class="kobetsupage2" >
+        <button type="button" id="menubtn">
+            <i class="material-icons">menu</i><span>MENU</span>
+        </button>
+        <ul class="kobetsupage2" id="linkurl2">
             <li>
                 <a href="/hyoshigis/why" class="linkurl"></a>
                  <div class = "links3">
@@ -38,7 +41,6 @@
             </li>
         </ul>
     </div>
-    
     <div class="how_much_haikei2">
         <div class="pricetitle">
             <span>分かりやすい料金設計</span>
@@ -86,7 +88,7 @@
         </p>
     </div>
 
-    <div class="how_much_haikei3">
+    <div class="how_much_haikei3 how_much_haikei4">
         <div class="price">
             <span>個別クラス</span>
         </div>
@@ -96,8 +98,68 @@
         <p class="price2">
             週２回：　<span>６０,０００円</span>
         </p>
-    </div>    
-
+    </div> 
+    <div class="nextpage">
+        <a href="/hyoshigis/where", class="nextpage2">
+            <span>
+               >> 教室はどこにあるの？
+            </span>
+        </a>
+        <a href="#", class="totop">
+            <span>
+                topへ
+            </span>
+        </a>
+    </div>
+    <div class="companyname">
+        <a class="modal-trigger" href="#modal1"><img alt="tsuke" src="/tsuke.jpg"></a>
+    </div>
+    
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <!--<h4>Modal Header</h4>-->
+          <p><br>  歌舞伎の舞台で、拍子木は幕開、幕切に打たれます。また役者の足音や決闘時の刀の音を表現します。この拍子木を打つ職人さんは舞台の目立たないところで、役者や舞台に花を添えています。<br><br>
+  これから表舞台で活躍するお子さんの人生に花を添える存在でありたい、そういう願い込めて教室の名前を「拍子木塾」に致しました。
+</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">閉じる</a>
+        </div>
+  </div>
 
 </div>
 
+<script>
+// $(document).ready(function(){
+//     $('.modal').modal();
+// });
+
+// $(function(){
+// 	$("#menubtn").click(function(){
+// 		$("#linkurl2").slideToggle();
+// 	});
+// });
+
+
+
+// var scrollAnimationElm = document.querySelectorAll('.companyname');
+// var scrollAnimationFunc = function() {
+//     var triggerMargin = 100;
+//     if (window.innerHeight > scrollAnimationElm[0].getBoundingClientRect().top + triggerMargin) {
+//       scrollAnimationElm[0].classList.add('show');
+//     }
+// }
+// window.addEventListener('load', scrollAnimationFunc);
+// window.addEventListener('scroll', scrollAnimationFunc);
+
+
+// $(document).ready(function () { $('.modal').modal(); });
+// $(function () {$('.modal').modal();});
+
+//   document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems, options);
+//   });
+
+
+</script>

@@ -15,6 +15,9 @@ end
 
 def create
     @info = Information.new(info_params)
+    @infodl = Infodownload.new
+    @info.email_confirmation = params[:information][:email_confirmation]
+    # binding.pry
     if params[:back]
         render :new
     else

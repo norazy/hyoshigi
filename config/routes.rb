@@ -37,7 +37,5 @@ Rails.application.routes.draw do
         get 'entry' => 'entry#new'
         post 'entry' => 'entry#create'
         post 'entry/confirm' => 'entry#confirm'
-        # ↓これで大丈夫なのかな？
-        post 'entry/entry/confirm' => 'entry#confirm'
     end
 end

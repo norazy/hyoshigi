@@ -5,12 +5,14 @@
   <title>拍子木塾</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <%= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true %>
-  <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+  <%#= stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true %>
+  <%#= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   
-  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Noto+Sans+SC" rel="stylesheet">
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -18,9 +20,11 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
-<body>
+<body  class="<%= I18n.locale %>">
+<!--<body>-->
 <header>
   <div class="title">
     <div class="mediataiou">
@@ -28,13 +32,15 @@
       <div class="header1">
         <div class = "logo">
           <div class = "logo1">
-            <span>こども中国語教室</span>
+            <!--<span>こども中国語教室</span>-->
+            <span><%= I18n.t "sublogo" %></span>
           </div>
           <div class="logo2">
-            <span ><a href="/">拍子木塾</a></span>
+            <!--<span ><a href="/">拍子木塾</a></span>-->
+            <span><a href="/"><%= I18n.t "logo" %></a></span>
           </div>
           <div class = "logo3">
-            <span>ひょうしぎじゅく</span>
+            <span><%= I18n.t "yomi" %></span>
           </div>
         </div>
       </div>
@@ -90,27 +96,27 @@
     <div class="fjoudan">
       <div class="links">
         <ul>
-            <li><a href="hyoshigis/aboutus">会社案内</a></li>
+            <li><a href="/hyoshigis/aboutus">会社案内</a></li>
             <li><a href="/inquiry">お問合せ</a></li>
-            <li><a href="hyoshigis/recruit">採用情報</a></li>
-            <li><a href="hyoshigis/more">よくある質問</a></li>
+            <li><a href="/hyoshigis/recruit">採用情報</a></li>
+            <li><a href="/hyoshigis/more">よくある質問</a></li>
         </ul>
       </div>
       <div class="sns clearfix">
         <div class="sns2">
           <div class="instagram">
             <!--パブリックに入れない方法があるか-->
-            <a href="#"><img alt="instagram" src="/instagram.png"/></a>
+            <a href="https://www.instagram.com/hyoshigi/"><img alt="instagram" src="/instagram.png"/></a>
           </div>
         </div>
         <div class="sns2">
           <div class="twitter">
-            <a href="#"><img alt="twitter" src="/twitter.png"/></a>
+            <a href="https://twitter.com/hyoshigis"><img alt="twitter" src="/twitter.png"/></a>
           </div>        
         </div>
         <div class="sns2">
           <div class="weibo">
-            <a href="#"><img alt="weibo" src="/weibo.png"/></a>
+            <a href="https://www.weibo.com/"><img alt="weibo" src="/weibo.png"/></a>
             <!--<a href="#"><img alt="weibo" src="/weibo.png"/></a>-->
           </div>
         </div>

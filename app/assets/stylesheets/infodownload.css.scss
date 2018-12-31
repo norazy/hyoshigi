@@ -1,22 +1,323 @@
 // Place all the styles related to the infodownload controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.infofin_haikei {
+@media (max-width: 499px) {
+// ダウンロード後に表示される画面
+.infodlfin_haikei {
     background-color: #ffffff;
     margin: 0;
-    padding: 130px;
+    padding-bottom: 245px;
+    padding-top: 50px;
     z-index: 1;
 
-    .infofin_haikei2 {
-        width: 900px;
+    .infodlfin_haikei2 {
+        width: 350px;
         margin: 0 auto;
-        padding: 0 100px 0 100px;
+        
+        .navigation img {
+            padding: 25px 0px 20px;
+            margin-left: -6px;
+        }
+    
+        .infoletter {
+            font-size: 18px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .dlfinletter {
+            width: 100%;
+            display: flex;
+
+            .dlfinletter2 {
+                width: 70%;
+                
+                    span {
+                        font-size: 16px;
+                        display: block;
+                        width: 80%;
+                        margin: 11% auto;
+                    }
+            }
+            
+            .dlfinletter4 {
+                width: 30%;
+                margin: 5% auto;
+                img {
+                    height: 70px;
+                }
+            }
+            
+        }
+        
+        .returnbutton {
+            width: 100%;
+
+            .returnbutton2 {
+                height: 41px;
+                border-radius: 14px;
+                background-color: #942a2a;
+                width: 43%;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                position: relative;
+                margin: 7% auto;
+                    
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                    
+                .botan_moji {
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 16px;
+                    padding: 8px 0;
+                }
+            }    
+            .returnbutton2:hover {
+                    background-color: #7a1010;
+            }
+        }
+    }
+}
+    
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+// ダウンロード後に表示される画面
+.infodlfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 175px 0 55px;
+    z-index: 1;
+
+    .infodlfin_haikei2 {
+        width: 450px;
+        margin: 0 auto;
         
         .navigation img {
             padding: 25px 0px 20px;
             margin-left: -8px;
         }
+    
+        .infoletter {
+            font-size: 19px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .dlfinletter {
+            width: 100%;
+            display: flex;
+
+            .dlfinletter2 {
+                width: 70%;
+                
+                    span {
+                        font-size: 17px;
+                        display: block;
+                        width: 80%;
+                        margin: 16% auto;
+                    }
+            }
+            
+            .dlfinletter4 {
+                width: 30%;
+                margin: 4% auto;
+                img {
+                    height: 110px;
+                }
+            }
+            
+        }
+        
+        .returnbutton {
+            width: 100%;
+
+            .returnbutton2 {
+                height: 43px;
+                border-radius: 14px;
+                background-color: #942a2a;
+                width: 36%;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                position: relative;
+                margin: 3% auto;
+                    
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                    
+                .botan_moji {
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 18px;
+                    padding: 8px 0;
+                }
+            }    
+            .returnbutton2:hover {
+                    background-color: #7a1010;
+            }
+        }
+    }
+}
+}
+
+@media (min-width: 768px) and (max-width: 1019px) {
+// ダウンロード後に表示される画面
+.infodlfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 110px 0 70px;
+    z-index: 1;
+
+    .infodlfin_haikei2 {
+        width: 660px;
+        margin: 0 auto;
+        padding: 80px 50px 0 50px;
+        
+        .navigation img {
+            padding: 25px 0px 20px;
+            margin-left: -8px;
+        }
+    
+        .infoletter {
+            font-size: 20px;
+        }
+
+        h2 {
+            border-bottom: solid 3px #d2d2d2;
+            position: relative;
+            margin: 1rem 0;
+        }
+        
+        h2:after {
+            content: "";
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 20%;
+            border-bottom: 3px solid #942a2a;
+        }
+        
+        .dlfinletter {
+            width: 100%;
+            display: flex;
+
+            .dlfinletter2 {
+                width: 60%;
+                
+                    span {
+                        font-size: 19px;
+                        display: block;
+                        width: 80%;
+                        margin: 16% auto;
+                    }
+            }
+            
+            .dlfinletter4 {
+                width: 40%;
+                margin: 4% auto;
+                img {
+                    height: 130px;
+                }
+            }
+            
+        }
+        
+        .returnbutton {
+            width: 100%;
+
+            .returnbutton2 {
+                height: 45px;
+                border-radius: 14px;
+                background-color: #942a2a;
+                width: 30%;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+                position: relative;
+                margin: 3% auto;
+                    
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                    
+                .botan_moji {
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 19px;
+                    padding: 8px 0;
+                }
+            }    
+            .returnbutton2:hover {
+                    background-color: #7a1010;
+            }
+        }
+    }
+}    
+}
+
+@media (min-width: 1020px) {
+// ダウンロード後に表示される画面
+.infodlfin_haikei {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 194px 0;
+    z-index: 1;
+
+    .infodlfin_haikei2 {
+        width: 900px;
+        margin: 0 auto;
+        padding: 0 100px 0 100px;
+        
+        // .navigation img {
+        //     padding: 25px 0px 20px;
+        //     margin-left: -8px;
+        // }
     
         .infoletter {
             font-size: 21px;
@@ -50,7 +351,7 @@
                     span {
                         font-size: 19px;
                         display: block;
-                        width: 82%;
+                        width: 65%;
                         margin: 20% auto;
                     }
             }
@@ -97,4 +398,5 @@
             }
         }
     }
+}
 }

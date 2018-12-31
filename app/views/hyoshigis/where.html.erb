@@ -1,6 +1,9 @@
 <div class = "where_haikei">
     <div class="kobetsupage">
-        <ul class="kobetsupage2" >
+        <button type="button" id="menubtn">
+            <i class="material-icons">menu</i><span>MENU</span>
+        </button>
+        <ul class="kobetsupage2" id="linkurl2">
             <li>
                 <a href="/hyoshigis/why" class="linkurl"></a>
                  <div class = "links3">
@@ -77,13 +80,37 @@
             <span>外観・教室の様子</span>
         </div>
         <div class="classroomphotos">
-            <div id="smallPicts"></div>
-        </div>
-        <div class="classroomphotos2">
-            <div id="pictureFrame">
-                <img src="/picture000.jpg" style="width: 700px; height: 450px;">
+            <div class="photo_box">
+                <img id="main_image" src="/picture000.jpg">
+            </div>
+            <div class="toolbar">
+                <div class="toolbarnav">
+                    <div id="prev"></div>
+                    <span id ="page"></span>
+                    <div id="next"></div>
+                </div>
             </div>
         </div>
+        <!--<div class="classroomphotos">-->
+        <!--    <div id="smallPicts"></div>-->
+        <!--</div>-->
+        <!--<div class="classroomphotos2">-->
+        <!--    <div id="pictureFrame">-->
+        <!--        <img src="/picture000.jpg" style="width: 700px; height: 450px;">-->
+        <!--    </div>-->
+        <!--</div>-->
+    </div>
+    <div class="nextpage">
+        <a href="/trial", class="nextpage2">
+           <span>
+                >>　教室を見てみたい方は、ぜひ体験会にどうぞ!
+           </span>
+        </a>
+        <a href="#", class="totop">
+            <span>
+                topへ                
+            </span>
+        </a>
     </div>
 </div>
 
@@ -100,39 +127,67 @@ function copyToClipboard() {
         // コピーをお知らせする
         alert("コピーできました！ : " + copyTarget.value);
 }
- 
-$(document).on("turbolinks:load", function() {
-    let pictureLength = 5;
-    let html = "";
-    
-    for (let i=0; i<5; i++) {
-        // iの最初の値は０
-        // 2番目の数：いつまで繰り返しを続けるか。今回は画像の枚数まで続ける。
-        // i++　はi+1をし続ける意味
-        
-        let fileName = `/picture00${i}.jpg`;
-        
-        html += `<img src="${fileName}" style="width: 130px; height: 90px;">`;
+
+var images = ['/picture000.jpg', '/picture001.jpg', '/picture002.jpg', '/picture003.jpg', '/picture004.jpg'];
+var current = 0;
+// ↓ページ番号を表示する部分
+var pageNum = function() {
+	document.getElementById('page').textContent = (current + 1) + '/' + images.length;
+}
+
+var changeImage = function(num){
+    if (current+num >= 0 && current+num < images.length){
+        current += num;
+        document.getElementById('main_image').src = images[current];
+        pageNum();
     }
+};
+
+pageNum();
+
+document.getElementById('prev').onclick = function (){
+    changeImage(-1);
+};
+document.getElementById('next').onclick = function (){
+    changeImage(1);
+};
+
+
+// $(function(){
+// 	$("#menubtn").click(function(){
+// 		$("#linkurl2").slideToggle();
+// 	});
+// });
+
+// $(document).on("turbolinks:load", function() {
+//     let pictureLength = 5;
+//     let html = "";
     
-    document.getElementById("smallPicts").innerHTML = html;
-    // 上で定義した：`<img src="${ファイル名}" style="width: 120px;">`;をsmallPictsに代入する
+//     for (let i=0; i<5; i++) {
+//         // iの最初の値は０
+//         // 2番目の数：いつまで繰り返しを続けるか。今回は画像の枚数まで続ける。
+//         // i++　はi+1をし続ける意味
+//         let fileName = `/picture00${i}.jpg`;
+//         html += `<img src="${fileName}" style="width: 130px; height: 90px;">`;
+//     }
+    
+//     document.getElementById("smallPicts").innerHTML = html;
+//     // 上で定義した：`<img src="${ファイル名}" style="width: 120px;">`;をsmallPictsに代入する
 
-    for (let i=0; i<5; i++) {
-        let fileName = `/picture00${i}.jpg`;
+//     for (let i=0; i<5; i++) {
+//         let fileName = `/picture00${i}.jpg`;
         
-        document.images[i].onmouseover = function() {
-          showPicture(fileName);
-        }
+//         document.images[i].onmouseover = function() {
+//           showPicture(fileName);
+//         }
 
-    }
+//     }
 
-  function showPicture(fileName) {
-    document.getElementById("pictureFrame").innerHTML =
-      `<img src="${fileName}" style="width: 700px; height: 450px;">`;
-  }     
-
- })
+//   function showPicture(fileName) {
+//     document.getElementById("pictureFrame").innerHTML =
+//       `<img src="${fileName}" style="width: 700px; height: 450px;">`;
+//   }     
+//  })
  
  
 </script>

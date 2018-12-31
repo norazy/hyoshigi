@@ -1,14 +1,523 @@
+@media (max-width: 499px) {
 .more_haikei {
     background-color: #942a2a;
-    // height: 500px;
     margin: 0;
-    padding: 130px;
+    padding: 10px 0 50px;
+    z-index: 1;
+    .kobetsupage{
+            width: 90%;
+            height: auto;
+            margin: 20px auto 27px;
+            #menubtn {
+                width: 64px;
+                padding: 6px 12px;
+                border: solid 2px #ffffff;
+                border-radius: 5px;
+                background-color: #49352a;
+                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+            }
+            #menubtn i{
+                color: #ffffff;
+                font-size: 22px;
+            }
+            
+            #menubtn span{
+                display: inline-block;
+                text-indent: -9999px;
+            }
+            #linkurl2 {
+                display: none;
+            }
+            
+            ul {
+                list-style: none;
+                width: 100%;
+                // padding-left: 2%;
+
+                li {
+                    display: block;
+                    border-bottom: dotted 2px #af6469;
+                    padding: 1.5% 5%;
+                    background: #efefef;
+                    position: relative;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+                    height: 39px;
+
+                    .linkurl {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .ten{
+                        display: none;
+                    }
+                    .link_moji {
+                        margin: 0 auto;
+                        span {
+                            font-size: 17px;
+                            color: #49352a;
+                        }
+                    }
+                }
+                li:nth-child(5) {
+                    border: none;
+                }
+            }    
+        }
+    
+    .more_haikei2 {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        padding-bottom: 40px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+        p {
+            margin-top: 0;
+        }
+        .dai {
+            font-size: 22px;
+            color: #49352a;
+            padding: 30px 30px 0 30px;
+            -webkit-margin-after: 0;
+            text-align: center;
+        }
+        
+        .questions {
+            width: 88%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-left: 0;
+            border-bottom: 2px dashed #c97e83;
+            font-size: 16px;
+            text-align: left;
+            
+            .q_title{
+                color: #942a2a;
+                padding: 5px;
+                padding-top: 15px;
+            }
+            
+            .q_answer{
+                color: #49352a;
+                padding-top: 10px;
+                padding-left: 38px;
+            }
+        }
+        
+        .botan {
+            width: 88%;
+            display: flex;
+            margin: 10px auto;
+
+            .botan_moji {
+                text-align: center;
+                color: #ffffff;
+                font-size: 18px;
+                margin: 10px auto;
+            }
+            
+            .botan2 {
+                border-radius: 14px;
+                background-color: #c97e83;
+                margin: 30px 20px 30px 10px;
+                width: 220px;
+                height: 50px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+            .botan3 {
+                border-radius: 14px;
+                background-color: #c97e83;
+                margin: 30px 10px 30px 20px;
+                width: 220px;
+                height: 50px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+        }
+
+    }
+}    
+}
+@media (min-width: 500px) and (max-width: 767px) {
+.more_haikei {
+    background-color: #942a2a;
+    margin: 0;
+    padding: 130px 6% 50px;
+    z-index: 1;
+    
+    .kobetsupage{
+        width: 100%;
+        height: auto;
+        margin: 20px auto 27px;
+        #menubtn {
+            width: 64px;
+            padding: 6px 12px;
+            border: solid 2px #ffffff;
+            border-radius: 5px;
+            background-color: #49352a;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+        #menubtn i{
+            color: #ffffff;
+            font-size: 22px;
+        }
+        #menubtn span{
+            display: inline-block;
+            text-indent: -9999px;
+        }
+        #linkurl2 {
+            display: none;
+        }
+        
+        ul {
+                list-style: none;
+                width: 100%;
+                padding-left: 2%;
+
+                li {
+                    display: block;
+                    border-bottom: dotted 2px #af6469;
+                    padding: 1.5% 5%;
+                    background: #efefef;
+                    position: relative;
+                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+                    height: 43px;
+
+                    .linkurl {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                    .ten{
+                        display: none;
+                    }
+                    .link_moji {
+                        margin: 0 auto;
+                        span {
+                            font-size: 17px;
+                            color: #49352a;
+                        }
+                    }
+                }
+                li:nth-child(5) {
+                    border: none;
+                }
+            }    
+    }
+
+    .more_haikei2 {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        padding-bottom: 50px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+        p {
+            margin-top: 0;
+        }
+        .dai {
+            font-size: 28px;
+            color: #49352a;
+            padding: 30px 30px 0 30px;
+            -webkit-margin-after: 0;
+            text-align: center;
+        }
+        
+        .questions {
+            width: 85%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-left: 10px;
+            border-bottom: 2px dashed #c97e83;
+            font-size: 17px;
+            text-align: left;
+            
+            .q_title{
+                color: #942a2a;
+                padding: 5px;
+                padding-top: 15px;
+            }
+            
+            .q_answer{
+                color: #49352a;
+                padding-top: 10px;
+                padding-left: 38px;
+            }
+        }
+        
+        .botan {
+            width: 80%;
+            display: flex;
+            margin: 10px auto;
+
+            .botan_moji {
+                text-align: center;
+                color: #ffffff;
+                font-size: 21px;
+                margin: 10px auto;
+            }
+            
+            .botan2 {
+                border-radius: 23px;
+                background-color: #c97e83;
+                margin: 30px 30px 30px 10px;
+                width: 220px;
+                height: 50px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+            .botan3 {
+                border-radius: 23px;
+                background-color: #c97e83;
+                margin: 30px 10px 30px 30px;
+                width: 220px;
+                height: 50px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+        }
+
+    }
+}
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+.more_haikei {
+    background-color: #942a2a;
+    margin: 0;
+    padding: 130px 110px 50px;
+    z-index: 1;
+    
+    .kobetsupage {
+        width: 100%;
+        height: 60px;
+        margin: 25px auto 12px;        
+
+        #menubtn{display:none;}
+        #linkur2{display: block !important}
+
+        ul {
+            list-style: none;
+            width: 100%;    
+            
+            :after{
+                content: "";
+                display: block;
+                clear: both;    
+            }
+            li {
+                width: 18%;
+                padding: 1.2%;
+                margin: 1% 2% 1% 0;
+                float: left;
+                background: #efefef;
+                border-radius: 8px;
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+                display: flex;
+                position: relative;
+                .linkurl {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                .ten{
+                    border-radius: 16px;
+                    height: 18px;
+                    width: 18px;
+                    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+                    }
+                .link_moji {
+                    margin: 0 auto;
+                    line-height: 1.15;
+                    span {
+                        font-size: 16px;
+                        color: #49352a;
+                    }
+                }
+                //点の色
+                .pinku {
+                    background-color: #e06666ff;
+                }
+                .kiiro {
+                    background-color: #ffd966ff;
+                }
+                .midori {
+                    background-color: #93c47dff;
+                }
+                .ao {
+                    background-color: #6d9eebff;
+                }
+                .murasaki {
+                    background-color: #8e7cc3ff;
+                }
+            }
+            li:hover{
+                    background-color: #942a2a;
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .more_haikei2 {
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        padding-bottom: 50px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+        p {
+            margin-top: 0;
+        }
+        .dai {
+            font-size: 31px;
+            color: #49352a;
+            padding: 30px 30px 0 30px;
+            -webkit-margin-after: 0;
+            text-align: center;
+        }
+        
+        .questions {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-left: 15px;
+            border-bottom: 2px dashed #c97e83;
+            font-size: 20px;
+            text-align: left;
+            
+            .q_title{
+                color: #942a2a;
+                padding: 5px;
+                padding-top: 15px;
+            }
+            
+            .q_answer{
+                color: #49352a;
+                padding-top: 10px;
+                padding-left: 45px;
+            }
+        }
+        
+        .botan {
+            width: 80%;
+            display: flex;
+            margin: 20px auto;
+
+            .botan_moji {
+                text-align: center;
+                color: #ffffff;
+                font-size: 24px;
+                margin: 12px auto;
+            }
+            
+            .botan2 {
+                border-radius: 23px;
+                background-color: #c97e83;
+                margin: 30px 40px 30px 10px;
+                width: 220px;
+                height: 62px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+            .botan3 {
+                border-radius: 23px;
+                background-color: #c97e83;
+                margin: 30px 10px 30px 40px;
+                width: 220px;
+                height: 62px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            
+                position: relative;
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            
+        }
+
+    }
+}
+}
+@media (min-width: 1020px) {
+.more_haikei {
+    background-color: #942a2a;
+    margin: 0;
+    padding: 130px 0 70px;
     z-index: 1;
     
     .kobetsupage{
         width: 900px;
         height: 80px;
         margin: 10px auto 20px;
+
+        #menubtn{display:none;}
+        #linkur2{display: block !important}
         
         ul {
             padding: 10px 10px 10px 0;
@@ -40,7 +549,6 @@
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    // margin-left: 0
                 }
             
                 .ten{
@@ -84,7 +592,7 @@
                 
             }
             li:hover{
-                    background-color: #c97e83;
+                    background-color: #942a2a;
                 
                 span {
                     color: white;
@@ -185,4 +693,5 @@
     }
 }
 
+}
 
