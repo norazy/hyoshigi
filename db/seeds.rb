@@ -11,5 +11,5 @@ require "csv"
 
 information_csv = CSV.readlines("db/information.csv")
 information_csv.each do |row|
-  Information.create(lastname: row[1], firstname: row[2], lastnamekana: row[3], firstnamekana: row[4])
+  Information.create(lastname: row[1], firstname: row[2], lastnamekana: row[3], firstnamekana: row[4], email: row[5], address: row[6], phonenumber1: row[7], phonenumber2: row[8], phonenumber3: row[9])
 end
