@@ -5,4 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Information.create(lastname: '拍子木', firstname: '太郎')
+# Information.create(lastname: '拍子木', firstname: '太郎')
+
+require "csv"
+
+information_csv = CSV.readlines("db/information.csv")
+information_csv.each do |row|
+  Product.create(lastname: row[1], firstname: row[2], lastnamekana: row[3], firstnamekana: row[4])
+end
