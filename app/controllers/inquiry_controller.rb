@@ -19,7 +19,6 @@ class InquiryController < ApplicationController
         if params[:back]
             render :new
         else
-            
             @inquiry.save
         end
     end
