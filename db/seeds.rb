@@ -11,5 +11,5 @@ require "csv"
 
 information_csv = CSV.readlines("db/information.csv")
 information_csv.each do |row|
-  Product.create(lastname: row[1], firstname: row[2], lastnamekana: row[3], firstnamekana: row[4])
+  Information.create(lastname: row[1], firstname: row[2], lastnamekana: row[3], firstnamekana: row[4])
 end
