@@ -4,6 +4,8 @@
     display: table;
 }
 
+
+
 @media (max-width: 499px) {
     .joudan {
         width: 100%;
@@ -22,6 +24,10 @@
         text-align: left;
         // padding-top: 150px;
 
+    }
+    
+    .modal .modal-content {
+        padding: 2% 10%;
     }
 
     .picture{
@@ -443,7 +449,11 @@
         text-align: left;
         padding-top: 120px;
     }
-    
+
+    .modal .modal-content {
+        padding: 2% 10%;
+    }    
+
     .picture{
         height: 200px;
         margin-top: 35px;
@@ -887,6 +897,10 @@
         width: 75%;
         height: 300px;
     }
+
+    .modal .modal-content {
+        padding: 2% 10%;
+    }
     
     .picture{
         width: 67%;
@@ -1214,6 +1228,10 @@
         width: 75%;
         height: 300px;
     }
+    
+    .modal .modal-content {
+        padding: 2% 10%;
+    }    
     
     .picture{
         width: 67%;
