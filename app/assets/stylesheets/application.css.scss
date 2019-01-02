@@ -62,13 +62,13 @@
     .title {
         border: solid 1px #c97e83;
         background-color: #c97e83;
-        height: 150px;
+        height: 157px;
         box-sizing: border-box;    
     }
 
-    .mediataiou{
-        position: relative;
-    }
+    // .mediataiou{
+    //     position: relative;
+    // }
     
     .header1 {
         box-sizing: border-box;
@@ -103,14 +103,15 @@
     
     
     .header2{
-        position: absolute;
-        bottom: 10px;
-        right: 15px;
+        // position: absolute;
+        // bottom: 10px;
+        // right: 15px;
         float: right;
         height: 70%;
         box-sizing: border-box;
         width: 80%;
         line-height: 1.15;
+        margin-right: 10px;
     }
     
     .clearfix:after {
@@ -124,7 +125,8 @@
         float: right;
         width: 15%;
         box-sizing: border-box;
-        margin: 67px 0 0 0;
+        // margin: 67px 0 0 0;
+        margin-top: 7px;
     }
     
     .gengo2 {
@@ -161,7 +163,7 @@
     .annai {
         float: right;
         width: 80%;
-        margin-top: 60px;
+        // margin-top: 60px;
         box-sizing: border-box;
         
     }

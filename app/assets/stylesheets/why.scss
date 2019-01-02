@@ -390,7 +390,7 @@
     .why_haikei {
         background-color: #49352a;
         margin: 0;
-        padding: 10px 0 30px;
+        padding: 2px 0 30px;
         z-index: 1;
         // min-width: 390px;
         .kobetsupage{
@@ -422,7 +422,7 @@
             ul {
                 list-style: none;
                 width: 100%;
-                // padding-left: 2%;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 
                 li {
                     display: block;
@@ -430,7 +430,6 @@
                     padding: 1.5% 5%;
                     background: #efefef;
                     position: relative;
-                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
                     height: 39px;
 
                     .linkurl {
