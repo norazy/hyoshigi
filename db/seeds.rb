@@ -1,5 +1,5 @@
-Information.create(lastname: "aa", firstname: "aa", lastnamekana: "スズキ", firstnamekana: "タロウ", email: "aaa@gmail.com", address: "aa", phonenumber1: "0000", phonenumber2: "1111", phonenumber3: "1111")
-
+# Information.create(lastname: "aa", firstname: "aa", lastnamekana: "スズキ", firstnamekana: "タロウ", email: "aaa@gmail.com", address: "aa", phonenumber1: "0000", phonenumber2: "1111", phonenumber3: "1111")
+Trialdate.create(trialdate: "2019-04-13 12:00:00", capacity: 4)
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
