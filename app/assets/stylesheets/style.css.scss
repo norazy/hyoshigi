@@ -906,10 +906,27 @@
     .picture{
         width: 67%;
         float: right;
-        height: 200px;
-        margin-top: 45px;
-        background: image-url("panda.gif") no-repeat center center;
-        background-size: 330px auto;
+        height: 250px;
+        // padding: 10px;
+        margin: 30px 0 0 0;
+        // background: image-url("panda.gif") no-repeat center center;
+        display: flex;
+        .kiki {
+            width: 250px;
+            text-align: left;
+            img {
+                height: 100%;
+                filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+            }
+        }
+        .shishi {
+            width: 250px;
+            text-align: right;
+            img {
+                height: 96%;
+                filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+            }
+        }
     }
     
     .why {
@@ -1238,10 +1255,27 @@
     .picture{
         width: 67%;
         float: right;
-        height: 200px;
-        padding: 10px;
-        margin: 50px 0 0 0;
-        background: image-url("panda.gif") no-repeat center center;
+        height: 250px;
+        // padding: 10px;
+        margin: 30px 0 0 0;
+        // background: image-url("panda.gif") no-repeat center center;
+        display: flex;
+        .kiki {
+            width: 250px;
+            text-align: left;
+            img {
+                height: 100%;
+                filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+            }
+        }
+        .shishi {
+            width: 250px;
+            text-align: right;
+            img {
+                height: 96%;
+                filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+            }
+        }
     }
     
     .why {
