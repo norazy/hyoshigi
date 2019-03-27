@@ -1,3 +1,4 @@
+
 @media (max-width: 499px) {
 .how_much_haikei {
     background-color: #49352a;
@@ -538,14 +539,16 @@
     .companyname{
         position: absolute;
         left: 16%;
-        bottom: 2%;
+        bottom: 5%;
         width: 15%;    
         height: auto; 
         
         img {
             width: 100%;
             display: block;
-            box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.4));
+
+            // box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
         }
     }
     #modal1 {
@@ -748,8 +751,13 @@
         img {
             width: 100%;
             display: block;
-            box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+            // filter: drop-shadow(2px 2px 2px rgba(160, 160, 160, 0.8));
+
+            // box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
         }
+        // .tsuke {
+        // }
+
     }
     
     #modal1 {
@@ -757,4 +765,3 @@
     }
 }
 }
-
